@@ -90,6 +90,10 @@ export const ContatoRight = styled.div`
   .selectCidade__placeholder {
     color: #fff;
   }
+
+  .selectCidade__menu {
+    z-index: 99999;
+  }
 `;
 
 export const ContatoText = styled.p`
