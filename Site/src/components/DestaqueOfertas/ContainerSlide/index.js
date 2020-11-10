@@ -21,24 +21,42 @@ import {
 } from "./styles";
 
 // import banner0 from "../../assets/images/bg1.png";
-import btnNext from "../../../assets/images/btnNext.png";
-import btnPrev from "../../../assets/images/btnPrev.png";
+import btnNext from "../../../assets/images/ofertas/destaRightButton.png";
+import btnPrev from "../../../assets/images/ofertas/destaLeftButton.png";
 // import btnOferta from "../../assets/images/btnOfertaBanner.png";
+
+import { dataOfertas } from "../../../data/destaqueOfertas";
 
 export default function ContainerSlide() {
   const [swiper, updateSwiper] = useState(null);
 
+  const RenderSlider = dataOfertas.map((slide) => (
+    <Slide key={slide.id}>
+      <img src={slide.image} alt="Slider" />
+    </Slide>
+  ));
+
   const params = {
+    swiper,
+    initialSlide: 0,
     loop: true,
+    getSwiper: updateSwiper,
     autoplay: {
       delay: 8500,
       disableOnInteraction: false,
     },
     slidesPerView: 3,
-    spaceBetween: 30,
+    // slidesPerGroup: 3,
+    spaceBetween: 7,
     pagination: {
       el: ".swiper-pagination",
+      type: "bullets",
       clickable: true,
+    },
+    navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
+      el: ".swiper-pagination",
     },
   };
 
@@ -61,8 +79,8 @@ export default function ContainerSlide() {
         <Control>Modulados</Control>
         <Control>Colchões</Control>
       </DivControls>
-      <Swiper getSwiper={updateSwiper} {...params}>
-        <Slide>teste</Slide>
+      <Swiper {...params}>
+        {RenderSlider}
       </Swiper>
       <ButtonPrev onClick={goPrev}>
         <img src={btnPrev} />

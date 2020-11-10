@@ -3,16 +3,33 @@ import { colors } from "../../../styles/colors";
 
 export const Container = styled.section`
   width: 100%;
+  max-width: 1390px;
   height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  margin: 0 auto;
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    max-width: 1220px;
+  }
+
+  .swiper-slide {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 
   .swiper-pagination {
     position: absolute;
     text-align: center;
     margin-top: 20px;
+    bottom: 10px;
   }
 
   .swiper-pagination-bullet {
@@ -29,11 +46,16 @@ export const Slide = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 385px;
+  width: 100%;
+  max-width: 385px;
   height: 648px;
   background-color: #f3f3f3;
   border: 1px solid #e5e5e5;
   margin: 0 16px;
+
+  img {
+    width: 100%;
+  }
 `;
 
 export const DivControls = styled.div`
@@ -109,6 +131,7 @@ export const OfertaNumero = styled.a`
 `;
 
 export const ButtonPrev = styled.button`
+content: "Teste";
   display: flex;
   align-items: center;
   background-color: transparent;
@@ -116,7 +139,7 @@ export const ButtonPrev = styled.button`
   position: absolute;
   z-index: 999;
   left: 0;
-  top: 60%;
+  top: 50%;
   transition: 300ms ease;
 
   &:hover {
@@ -142,7 +165,7 @@ export const ButtonNext = styled.button`
   position: absolute;
   z-index: 999;
   right: 0;
-  top: 60%;
+  top: 50%;
   transition: 300ms ease;
 
   &:hover {
