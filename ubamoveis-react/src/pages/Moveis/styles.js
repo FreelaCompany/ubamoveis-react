@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const DivTitulo = styled.div`
   width: 100%;
-  margin: 48px 0;
+  height: 95px;
+  margin-top: 64px;
+  margin-bottom: 51px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,10 +32,12 @@ export const Separator = styled.div`
   margin: 16px 0 24px 0;
 `;
 
-export const Obs = styled.p`
-  margin-top: 40px;
-  font-family: "SourceSansProRegular";
-  font-size: 16px;
-  line-height: 20px;
-  color: #737373;
+export const DivProdutos = styled.div`
+  width: 100%;
+  max-width: 1345px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
 `;

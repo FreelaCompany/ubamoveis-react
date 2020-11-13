@@ -63,4 +63,52 @@ export const dataOfertas = [
       },
     ],
   },
+  {
+    id: 4,
+    image: Oferta3,
+    name: `RACK RETRÔ`,
+    price: `372,90`,
+    validate: `14/07/2020`,
+    height: 180,
+    width: 148,
+    depth: 180,
+    colors: [
+      {
+        id: 1,
+        color: "#E2DABF",
+      },
+    ],
+  },
+  {
+    id: 5,
+    image: Oferta3,
+    name: `RACK RETRÔ`,
+    price: `372,90`,
+    validate: `14/07/2020`,
+    height: 180,
+    width: 148,
+    depth: 180,
+    colors: [
+      {
+        id: 1,
+        color: "#E2DABF",
+      },
+    ],
+  },
+  {
+    id: 6,
+    image: Oferta3,
+    name: `RACK RETRÔ`,
+    price: `372,90`,
+    validate: `14/07/2020`,
+    height: 180,
+    width: 148,
+    depth: 180,
+    colors: [
+      {
+        id: 1,
+        color: "#E2DABF",
+      },
+    ],
+  },
 ];

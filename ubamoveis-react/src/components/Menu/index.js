@@ -5,6 +5,7 @@ import {
   FaFacebookF as Facebook,
 } from "react-icons/fa";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 
 import {
   Container,
@@ -64,14 +65,16 @@ export default function Menu() {
     <Container>
       <Content>
         <DivLeft>
-          <Logo src={logoMenu} />
-          <LinkLeft>móveis</LinkLeft>
+          <Link to="/">
+            <Logo src={logoMenu} />
+          </Link>
+          <LinkLeft to="/moveis">móveis</LinkLeft>
           <LinkLeft>modulados</LinkLeft>
-          <LinkLeft>colchões</LinkLeft>
+          <LinkLeft to="/colchoes">colchões</LinkLeft>
         </DivLeft>
         <DivRight>
           <MenuRight>
-            <LinkRight>Sobre nós</LinkRight>
+            <LinkRight to="/sobre">Sobre nós</LinkRight>
             <LinkRight>Nossas Lojas</LinkRight>
             <LinkRight>Trabalhe Conosco</LinkRight>
           </MenuRight>

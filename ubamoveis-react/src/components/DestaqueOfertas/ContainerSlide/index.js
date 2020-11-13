@@ -10,20 +10,27 @@ import {
   ButtonNext,
   DivControls,
   Control,
-  DivTitulo,
-  Titulo,
-  Descricao,
-  DivPreco,
-  Preco,
-  PrecoSmall,
-  Pagamento,
-  OfertaNumero,
+  DivProduto,
 } from "./styles";
 
-// import banner0 from "../../assets/images/bg1.png";
+import {
+  Separator,
+  DivPrice,
+  Title,
+  SeparatorLight,
+  Price,
+  Valid,
+  DivBottom,
+  DivInfo,
+  Info,
+  DivColors,
+  TitleColor,
+  Colors,
+  Color,
+} from "../../Produto/styles";
+
 import btnNext from "../../../assets/images/ofertas/destaRightButton.png";
 import btnPrev from "../../../assets/images/ofertas/destaLeftButton.png";
-// import btnOferta from "../../assets/images/btnOfertaBanner.png";
 
 import { dataOfertas } from "../../../data/destaqueOfertas";
 
@@ -31,9 +38,31 @@ export default function ContainerSlide() {
   const [swiper, updateSwiper] = useState(null);
 
   const RenderSlider = dataOfertas.map((slide) => (
-    <Slide key={slide.id}>
+    <DivProduto key={slide.id}>
       <img src={slide.image} alt="Slider" />
-    </Slide>
+      <Separator />
+      <DivPrice>
+        <Title>Guarda-Roupa Casal Retrô</Title>
+        <Price>R$ 679,00</Price>
+        <Valid>Preço válido até 10/07/2020</Valid>
+      </DivPrice>
+      <SeparatorLight />
+      <DivBottom>
+        <DivInfo>
+          <Info>Altura: 180cm</Info>
+          <Info>Largura: 148cm</Info>
+          <Info>Profundidade: 180cm</Info>
+        </DivInfo>
+        <DivColors>
+          <TitleColor>CORES DISPONÍVEIS:</TitleColor>
+          <Colors>
+            <Color color="#fff" />
+            <Color color="#E2DABF" />
+            <Color color="#211B16" />
+          </Colors>
+        </DivColors>
+      </DivBottom>
+    </DivProduto>
   ));
 
   const params = {
@@ -41,10 +70,10 @@ export default function ContainerSlide() {
     initialSlide: 0,
     loop: true,
     getSwiper: updateSwiper,
-    autoplay: {
-      delay: 8500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 8500,
+    //   disableOnInteraction: false,
+    // },
     slidesPerView: 3,
     // slidesPerGroup: 3,
     spaceBetween: 7,
@@ -75,13 +104,11 @@ export default function ContainerSlide() {
   return (
     <Container id="banner">
       <DivControls>
-        <Control>Móveis</Control>
+        <Control active>Móveis</Control>
         <Control>Modulados</Control>
         <Control>Colchões</Control>
       </DivControls>
-      <Swiper {...params}>
-        {RenderSlider}
-      </Swiper>
+      <Swiper {...params}>{RenderSlider}</Swiper>
       <ButtonPrev onClick={goPrev}>
         <img src={btnPrev} />
       </ButtonPrev>

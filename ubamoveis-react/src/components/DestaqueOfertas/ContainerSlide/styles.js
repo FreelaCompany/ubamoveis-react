@@ -4,7 +4,7 @@ import { colors } from "../../../styles/colors";
 export const Container = styled.section`
   width: 100%;
   max-width: 1390px;
-  height: 750px;
+  height: 810px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,6 +62,7 @@ export const DivControls = styled.div`
   height: 33px;
   display: flex;
   flex-direction: row;
+  margin-bottom: 27px;
 `;
 
 export const Control = styled.h1`
@@ -70,6 +71,7 @@ export const Control = styled.h1`
   line-height: 22px;
   color: #000;
   margin: 0 17px;
+  border-bottom: ${(props) => (props.active ? "3px solid #000" : "none")};
 
   &:first-child {
     margin-left: 0;
@@ -131,7 +133,7 @@ export const OfertaNumero = styled.a`
 `;
 
 export const ButtonPrev = styled.button`
-content: "Teste";
+  content: "Teste";
   display: flex;
   align-items: center;
   background-color: transparent;
@@ -180,5 +182,23 @@ export const ButtonNext = styled.button`
   @media screen and (max-width: 680px) {
     right: 48px;
     top: 40%;
+  }
+`;
+
+export const DivProduto = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 385px;
+  height: 648px;
+  background-color: #f3f3f3;
+  border: 1px solid #e5e5e5;
+  margin: 0 16px 48px 16px;
+  padding: 26px 32px 42px 32px;
+
+  img {
+    width: 354px;
+    height: 354px;
   }
 `;

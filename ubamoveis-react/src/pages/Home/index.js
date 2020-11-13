@@ -7,6 +7,7 @@ import Sobre from "../../components/Sobre";
 import Newsletter from "../../components/Newsletter";
 import NossasLojas from "../../components/NossasLojas";
 import Footer from "../../components/Footer";
+import ModuladosColchoes from "../../components/ModuladosColchoes";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Menu />
       <Banner />
       <DestaqueOfertas />
+      <ModuladosColchoes />
       <Sobre />
       <Newsletter />
       <NossasLojas />
