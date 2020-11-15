@@ -75,7 +75,7 @@ export default function Menu() {
         <DivRight>
           <MenuRight>
             <LinkRight to="/sobre">Sobre nós</LinkRight>
-            <LinkRight>Nossas Lojas</LinkRight>
+            <LinkRight to="/lojas">Nossas Lojas</LinkRight>
             <LinkRight>Trabalhe Conosco</LinkRight>
           </MenuRight>
           <ContatoRight>
