@@ -6,6 +6,8 @@ import Moveis from "../pages/Moveis";
 import Colchoes from "../pages/Colchoes";
 import Sobre from "../pages/Sobre";
 import Lojas from "../pages/Lojas";
+import TrabalheConosco from "../pages/TrabalheConosco";
+import Modulados from "../pages/Modulados";
 
 export default function Routes() {
   return (
@@ -15,6 +17,8 @@ export default function Routes() {
       <Route path="/colchoes" exact component={Colchoes} />
       <Route path="/sobre" exact component={Sobre} />
       <Route path="/lojas" exact component={Lojas} />
+      <Route path="/trabalhe_conosco" exact component={TrabalheConosco} />
+      <Route path="/modulados" exact component={Modulados} />
     </Switch>
   );
 }

@@ -69,14 +69,14 @@ export default function Menu() {
             <Logo src={logoMenu} />
           </Link>
           <LinkLeft to="/moveis">móveis</LinkLeft>
-          <LinkLeft>modulados</LinkLeft>
+          <LinkLeft to="/modulados">modulados</LinkLeft>
           <LinkLeft to="/colchoes">colchões</LinkLeft>
         </DivLeft>
         <DivRight>
           <MenuRight>
             <LinkRight to="/sobre">Sobre nós</LinkRight>
             <LinkRight to="/lojas">Nossas Lojas</LinkRight>
-            <LinkRight>Trabalhe Conosco</LinkRight>
+            <LinkRight to="/trabalhe_conosco">Trabalhe Conosco</LinkRight>
           </MenuRight>
           <ContatoRight>
             <WhatsApp color="#F7BF3B" size={17} />

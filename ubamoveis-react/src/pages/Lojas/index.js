@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+
 import {
   GoogleMap,
   LoadScript,
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
+import Select from "react-select";
+import { FaWhatsapp as WhatsApp } from "react-icons/fa";
 
 import Menu from "../../components/Menu";
 import BannerInterna from "../../components/BannerInterna";
@@ -13,16 +16,52 @@ import NossasLojas from "../../components/NossasLojas";
 import Footer from "../../components/Footer";
 
 import {
-  DivTitulo,
-  Titulo,
-  TituloStrong,
+  DivUnidades,
+  TituloUnidades,
+  Descricao,
   Separator,
-  DivProdutos,
+  Unidades,
+  CidadeTelefone,
+  Telefone,
+  EnderecoLoja,
+  NomeLoja,
 } from "./styles";
 
 import LojasImg from "../../assets/images/lojas_interna.png";
 
 export default function Lojas() {
+  const cidadeOptions = [
+    {
+      label: "Volta Redonda",
+      value: "(24) 99317-9372",
+      location: {
+        lat: -22.5136835,
+        lng: -44.0956295,
+      },
+    },
+    {
+      label: "Barra Mansa",
+      value: "(24) 99318-4972",
+      location: {
+        lat: -22.543474,
+        lng: -44.1138613,
+      },
+    },
+    {
+      label: "Barra do Piraí",
+      value: "(24) 99317-8979",
+      location: {
+        lat: -22.4624814,
+        lng: -43.8255285,
+      },
+    },
+  ];
+
+  const [cidade, setCidade] = useState(cidadeOptions[0].value);
+  const [cidadeLabel, setCidadeLabel] = useState(cidadeOptions[0].label);
+  const [cidadeLocation, setCidadeLocation] = useState(
+    cidadeOptions[0].location
+  );
   const [selected, setSelected] = useState({});
 
   const onSelect = (item) => {
@@ -33,48 +72,25 @@ export default function Lojas() {
     width: "800px",
   };
 
-  const defaultCenter = {
-    lat: -22.5383368,
-    lng: -44.1195285,
-  };
-
-  const locations = [
-    {
-      name: "Location 1",
-      location: {
-        lat: -22.5383368,
-        lng: -44.1195285,
-      },
-    },
-    {
-      name: "Location 2",
-      location: {
-        lat: 41.3917,
-        lng: 2.1649,
-      },
-    },
-    {
-      name: "Location 3",
-      location: {
-        lat: 41.3773,
-        lng: 2.1585,
-      },
-    },
-    {
-      name: "Location 4",
-      location: {
-        lat: 41.3797,
-        lng: 2.1682,
-      },
-    },
-    {
-      name: "Location 5",
-      location: {
-        lat: 41.4055,
-        lng: 2.1915,
-      },
-    },
-  ];
+  function handleCidade(value) {
+    switch (value.label) {
+      case "Volta Redonda":
+        setCidade("(24) 99317-9372");
+        setCidadeLabel("Volta Redonda");
+        setCidadeLocation(value.location);
+        break;
+      case "Barra Mansa":
+        setCidade("(24) 99318-4972");
+        setCidadeLabel("Barra Mansa");
+        setCidadeLocation(value.location);
+        break;
+      case "Barra do Piraí":
+        setCidade("(24) 99317-8979");
+        setCidadeLabel("Barra do Piraí");
+        setCidadeLocation(value.location);
+        break;
+    }
+  }
 
   return (
     <>
@@ -84,30 +100,73 @@ export default function Lojas() {
         title="Nossas Lojas"
         text="Conheça as lojas Ubá."
       />
-      <LoadScript googleMapsApiKey="AIzaSyCsw3_s3pdAJgaUWn8hFtwV7yg5wmKFkyY">
-        <GoogleMap
-          mapContainerStyle={mapStyles}
-          zoom={13}
-          center={defaultCenter}>
-          {locations.map((item) => {
-            return (
-              <Marker
-                key={item.name}
-                position={item.location}
-                onClick={() => onSelect(item)}
-              />
-            );
-          })}
-          {selected.location && (
-            <InfoWindow
-              position={selected.location}
-              clickable={true}
-              onCloseClick={() => setSelected({})}>
-              <p>{selected.name}</p>
-            </InfoWindow>
+      <DivUnidades>
+        <Unidades>
+          <TituloUnidades>Unidades</TituloUnidades>
+          <Separator />
+          <Descricao>Encontre a Ubá mais perto de você!</Descricao>
+          <Select
+            name="cidade"
+            placeholder={cidadeLabel}
+            className="selectCidade"
+            classNamePrefix="selectCidade"
+            options={cidadeOptions}
+            onChange={(value) => {
+              handleCidade(value);
+            }}
+            value={cidade}
+          />
+
+          <NomeLoja>{cidadeLabel}</NomeLoja>
+          {cidadeLabel === "Volta Redonda" ? (
+            <EnderecoLoja>
+              Rua Gustavo Lira, 14, Centro, Volta Redonda, RJ <br /> CEP:
+              27253-280
+            </EnderecoLoja>
+          ) : cidadeLabel === "Barra Mansa" ? (
+            <EnderecoLoja>
+              Rua Lacyr Schetino, 46, 9 de Abril, Barra Mansa - RJ <br />
+              CEP: 27335-270
+            </EnderecoLoja>
+          ) : (
+            <EnderecoLoja>
+              R. Luís Barbosa, 374 - Matadouro, Barra do Piraí - RJ <br />
+              CEP: 27115-000
+            </EnderecoLoja>
           )}
-        </GoogleMap>
-      </LoadScript>
+
+          <CidadeTelefone>
+            <WhatsApp color="#F7BF3B" size={17} />
+            <Telefone>{cidade}</Telefone>
+          </CidadeTelefone>
+        </Unidades>
+
+        <LoadScript googleMapsApiKey="AIzaSyCsw3_s3pdAJgaUWn8hFtwV7yg5wmKFkyY">
+          <GoogleMap
+            mapContainerStyle={mapStyles}
+            zoom={16}
+            center={cidadeLocation}>
+            {cidadeOptions.map((item) => {
+              return (
+                <Marker
+                  key={item.label}
+                  position={item.location}
+                  onClick={() => onSelect(item)}
+                  label="Ubá Móveis"
+                />
+              );
+            })}
+            {selected.location && (
+              <InfoWindow
+                position={selected.location}
+                clickable={true}
+                onCloseClick={() => setSelected({})}>
+                <p>{selected.name}</p>
+              </InfoWindow>
+            )}
+          </GoogleMap>
+        </LoadScript>
+      </DivUnidades>
       <Newsletter />
       <NossasLojas />
       <Footer />

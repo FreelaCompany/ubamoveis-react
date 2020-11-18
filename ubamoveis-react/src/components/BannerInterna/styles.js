@@ -25,7 +25,7 @@ export const Text = styled.p`
   font-size: 18px;
   line-height: 23px;
   color: #e4e4e4;
-  width: 311px;
+  width: 320px;
   text-align: center;
   margin-top: 10px;
 `;
