@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 100%;
+  max-width: 1100px;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -28,10 +29,11 @@ export const Logo = styled.img`
 export const DivLeft = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const LinkLeft = styled(Link)`
-  margin: 12px 0 0 25px;
+  margin: 0 0 0 25px;
   color: #fff;
   text-transform: uppercase;
   font-family: "DosisMedium";

@@ -58,6 +58,11 @@ export default function Menu() {
         setCidadeLabel("Bebê e Colchões");
         setLinkWhats("https://wa.me/5524993178064");
         break;
+      default:
+        setCidade("(24) 99317-9372");
+        setCidadeLabel("Volta Redonda");
+        setLinkWhats("https://wa.me/5524993179372");
+        break;
     }
   }
 
@@ -96,10 +101,10 @@ export default function Menu() {
               {cidade}
             </NumeroSelecionado>
             <DivSociais>
-              <LinkSocial href="https://www.instagram.com/">
+              <LinkSocial href="https://www.instagram.com/lojaubamoveis/?hl=pt-br">
                 <Instagram color="#fff" size={18} />
               </LinkSocial>
-              <LinkSocial href="https://www.instagram.com/">
+              <LinkSocial href="https://www.facebook.com/lojaubamoveis/">
                 <Facebook color="#fff" size={18} />
               </LinkSocial>
             </DivSociais>

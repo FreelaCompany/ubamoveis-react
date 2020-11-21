@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Form, Input, Textarea } from "@rocketseat/unform";
+import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
 import { FaSpinner } from "react-icons/fa";
 import Select from "react-select";

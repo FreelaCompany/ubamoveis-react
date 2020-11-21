@@ -6,8 +6,6 @@ import Newsletter from "../../components/Newsletter";
 import NossasLojas from "../../components/NossasLojas";
 import Footer from "../../components/Footer";
 
-import Produto from "../../components/Produto";
-
 import {
   DivTitulo,
   TituloStrong,

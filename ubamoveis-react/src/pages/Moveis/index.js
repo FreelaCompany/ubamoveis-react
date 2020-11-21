@@ -2,12 +2,9 @@ import React from "react";
 
 import Menu from "../../components/Menu";
 import BannerInterna from "../../components/BannerInterna";
-import DestaqueOfertas from "../../components/DestaqueOfertas";
-import Sobre from "../../components/Sobre";
 import Newsletter from "../../components/Newsletter";
 import NossasLojas from "../../components/NossasLojas";
 import Footer from "../../components/Footer";
-import ModuladosColchoes from "../../components/ModuladosColchoes";
 
 import Produto from "../../components/Produto";
 

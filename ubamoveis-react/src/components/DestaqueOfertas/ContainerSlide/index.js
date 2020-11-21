@@ -5,7 +5,6 @@ import "swiper/css/swiper.css";
 
 import {
   Container,
-  Slide,
   ButtonPrev,
   ButtonNext,
   DivControls,
@@ -69,6 +68,7 @@ export default function ContainerSlide() {
     swiper,
     initialSlide: 0,
     loop: true,
+
     getSwiper: updateSwiper,
     // autoplay: {
     //   delay: 8500,
@@ -81,6 +81,7 @@ export default function ContainerSlide() {
       el: ".swiper-pagination",
       type: "bullets",
       clickable: true,
+      dynamicBullets: true,
     },
     navigation: {
       nextEl: ".button-next",

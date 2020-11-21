@@ -68,10 +68,10 @@ export default function Banner() {
         </Slide>
       </Swiper>
       <ButtonPrev onClick={goPrev}>
-        <img src={btnPrev} />
+        <img src={btnPrev} alt="" />
       </ButtonPrev>
       <ButtonNext onClick={goNext}>
-        <img src={btnNext} />
+        <img src={btnNext} alt="" />
       </ButtonNext>
     </Container>
   );

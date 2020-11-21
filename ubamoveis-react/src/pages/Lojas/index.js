@@ -89,6 +89,11 @@ export default function Lojas() {
         setCidadeLabel("Barra do Piraí");
         setCidadeLocation(value.location);
         break;
+      default:
+        setCidade("(24) 99317-9372");
+        setCidadeLabel("Volta Redonda");
+        setCidadeLocation(value.location);
+        break;
     }
   }
 

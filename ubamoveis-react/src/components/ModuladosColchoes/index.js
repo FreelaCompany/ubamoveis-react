@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Container } from "./styles";
 
@@ -8,8 +9,12 @@ import ColchaoHome from "../../assets/images/colchao_home.png";
 function ModuladosColchoes() {
   return (
     <Container>
-      <img src={ModuladosHome} />
-      <img src={ColchaoHome} />
+      <Link to="/modulados">
+        <img src={ModuladosHome} />
+      </Link>
+      <Link to="/colchoes">
+        <img src={ColchaoHome} />
+      </Link>
     </Container>
   );
 }
