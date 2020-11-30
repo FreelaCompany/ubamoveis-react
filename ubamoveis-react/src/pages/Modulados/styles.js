@@ -84,6 +84,7 @@ export const TituloVantagens = styled.h1`
   line-height: 31px;
   text-transform: uppercase;
   color: #000;
+  margin-bottom: 12px;
 `;
 
 export const LinhaVantagens = styled.div`
@@ -96,22 +97,24 @@ export const LinhaVantagens = styled.div`
 
 export const Vantagem = styled.p`
   font-family: "DosisSemiBold";
-  font-size: 20px;
+  font-size: 18px;
   line-height: 26px;
-  color: #000;
+  color: #747474;
 `;
 
 export const ImgVantagem = styled.img`
   width: 20px;
   height: 14px;
-  margin: 10px 0;
+  margin: 10px 15px;
 `;
 
 export const DivControls = styled.div`
   height: 33px;
   display: flex;
+  width: 460px;
   flex-direction: row;
   margin-bottom: 27px;
+  justify-content: space-between;
 `;
 
 export const Control = styled.h1`
@@ -121,12 +124,6 @@ export const Control = styled.h1`
   color: #000;
   margin: 0 17px;
   border-bottom: ${(props) => (props.active ? "3px solid #000" : "none")};
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
+  text-transform: uppercase;
+  cursor: pointer;
 `;

@@ -49,23 +49,9 @@ export default function Banner() {
   return (
     <Container id="banner">
       <Swiper getSwiper={updateSwiper} {...params}>
-        <Slide url={banner0}>
-          <DivTitulo>
-            <Titulo>SOFÁ 3L ESTILO RETRÔ</Titulo>
-            <Descricao>Várias opções de tecido</Descricao>
-          </DivTitulo>
-          <DivPreco>
-            <Preco>
-              R$ 1.637<PrecoSmall>,00</PrecoSmall>
-            </Preco>
-            <Pagamento>10X de R$ 204,00</Pagamento>
-          </DivPreco>
-          <OfertaNumero
-            src={btnOferta}
-            href="https://wa.me/5524993179372"
-            target="_blank"
-          />
-        </Slide>
+        <a>
+          <Slide url={banner0} />
+        </a>
       </Swiper>
       <ButtonPrev onClick={goPrev}>
         <img src={btnPrev} alt="" />

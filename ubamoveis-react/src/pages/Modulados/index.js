@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ListActions from "../../store/ducks/produtos-list";
+import { useDispatch, useSelector } from "react-redux";
 
 import Menu from "../../components/Menu";
 import BannerInterna from "../../components/BannerInterna";
@@ -31,6 +33,21 @@ import ModuladosImg from "../../assets/images/modulados_interna.png";
 import { dataOfertas } from "../../data/destaqueOfertas";
 
 export default function Modulados() {
+  const dispatch = useDispatch();
+  const [subcategoria, setSubCategoria] = useState(1);
+  const { data: dataProdutos } = useSelector((state) => state.produtosList);
+
+  async function handleListProdutos() {
+    dispatch(ListActions.listRequest());
+  }
+
+  useEffect(() => {
+    handleListProdutos();
+  }, []);
+
+  const dataProdutosFilter = dataProdutos?.filter(
+    (item) => item.id_categoria === 2 && item.id_subcategoria === subcategoria
+  );
   return (
     <>
       <Menu />
@@ -87,14 +104,26 @@ export default function Modulados() {
         <TituloStrong>Últimos Produtos</TituloStrong>
         <Separator />
         <DivControls>
-          <Control active>Móveis</Control>
-          <Control>Modulados</Control>
-          <Control>Colchões</Control>
+          <Control
+            active={subcategoria === 1}
+            onClick={() => setSubCategoria(1)}>
+            Quarto de Solteiro
+          </Control>
+          <Control
+            active={subcategoria === 2}
+            onClick={() => setSubCategoria(2)}>
+            Quarto de Casal
+          </Control>
+          <Control
+            active={subcategoria === 3}
+            onClick={() => setSubCategoria(3)}>
+            Cozinha
+          </Control>
         </DivControls>
       </DivTitulo>
 
       <DivProdutos>
-        {dataOfertas.map((item) => (
+        {dataProdutosFilter?.map((item) => (
           <Produto data={item} />
         ))}
       </DivProdutos>

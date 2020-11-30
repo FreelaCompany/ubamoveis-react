@@ -20,26 +20,27 @@ import {
 function Produto({ data }) {
   return (
     <ContainerProduto>
-      <img src={data.image} alt="Slider" />
+      <img src={data.foto} alt="datar" />
       <Separator />
       <DivPrice>
-        <Title>Guarda-Roupa Casal Retrô</Title>
-        <Price>R$ 679,00</Price>
-        <Valid>Preço válido até 10/07/2020</Valid>
+        <Title>{data.nome}</Title>
+        <Price>R$ {data.preco}</Price>
+        <Valid>Preço válido até {data.validade_preco}</Valid>
       </DivPrice>
       <SeparatorLight />
       <DivBottom>
         <DivInfo>
-          <Info>Altura: 180cm</Info>
-          <Info>Largura: 148cm</Info>
-          <Info>Profundidade: 180cm</Info>
+          <Info>Altura: {data.altura}cm</Info>
+          <Info>Largura: {data.largura}cm</Info>
+          <Info>Profundidade: {data.profundidade}cm</Info>
         </DivInfo>
         <DivColors>
           <TitleColor>CORES DISPONÍVEIS:</TitleColor>
           <Colors>
-            <Color color="#fff" />
-            <Color color="#E2DABF" />
-            <Color color="#211B16" />
+            {data.cor1 !== "null" && <Color color={data.cor1} />}
+            {data.cor2 !== "null" && <Color color={data.cor2} />}
+            {data.cor3 !== "null" && <Color color={data.cor3} />}
+            {data.cor4 !== "null" && <Color color={data.cor4} />}
           </Colors>
         </DivColors>
       </DivBottom>

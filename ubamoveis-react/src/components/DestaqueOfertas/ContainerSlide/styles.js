@@ -60,9 +60,11 @@ export const Slide = styled.div`
 
 export const DivControls = styled.div`
   height: 33px;
+  width: 292px;
   display: flex;
   flex-direction: row;
   margin-bottom: 27px;
+  justify-content: space-between;
 `;
 
 export const Control = styled.h1`
@@ -70,16 +72,10 @@ export const Control = styled.h1`
   font-size: 18px;
   line-height: 22px;
   color: #000;
-  margin: 0 17px;
   border-bottom: ${(props) => (props.active ? "3px solid #000" : "none")};
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
+  width: "30%";
+  text-transform: uppercase;
+  cursor: pointer;
 `;
 
 export const Descricao = styled.p`

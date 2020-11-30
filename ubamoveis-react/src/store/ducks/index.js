@@ -1,11 +1,8 @@
 import { combineReducers } from "redux";
-
-// import { reducer as noticia } from "./noticia";
-// import { reducer as noticias } from "./noticias";
+import { reducer as produtosList } from "./produtos-list";
 
 const reducers = combineReducers({
-  // noticia,
-  // noticias,
+  produtosList,
 });
 
 export default reducers;

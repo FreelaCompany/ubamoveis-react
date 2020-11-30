@@ -41,6 +41,25 @@ export const Input = styled.div`
     width: 437px;
     height: 52px;
     padding: 15px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #fff;
+  }
+
+  ::-moz-placeholder {
+    color: orange;
+  }
+
+  ::-moz-placeholder {
+    color: orange;
+  }
+
+  ::-ms-input-placeholder {
+    color: orange;
   }
 
   button {

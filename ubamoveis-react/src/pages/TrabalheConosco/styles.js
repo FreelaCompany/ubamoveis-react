@@ -308,7 +308,7 @@ export const SendButton = styled.button.attrs({
   justify-content: center;
   width: max-content;
   padding: 16px 24px;
-  margin: 0 auto;
+  margin: 24px auto;
   border-radius: 3px;
   align-self: flex-start;
   background-color: #f4b828;

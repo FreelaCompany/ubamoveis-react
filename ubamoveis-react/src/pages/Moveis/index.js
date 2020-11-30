@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ListActions from "../../store/ducks/produtos-list";
+import { useDispatch, useSelector } from "react-redux";
 
 import Menu from "../../components/Menu";
 import BannerInterna from "../../components/BannerInterna";
@@ -21,6 +23,21 @@ import MoveisImg from "../../assets/images/moveis_interna.png";
 import { dataOfertas } from "../../data/destaqueOfertas";
 
 export default function Moveis() {
+  const dispatch = useDispatch();
+  const { data: dataProdutos } = useSelector((state) => state.produtosList);
+
+  async function handleListProdutos() {
+    dispatch(ListActions.listRequest());
+  }
+
+  useEffect(() => {
+    handleListProdutos();
+  }, []);
+
+  const dataProdutosFilter = dataProdutos?.filter(
+    (item) => item.id_categoria === 1
+  );
+
   return (
     <>
       <Menu />
@@ -36,7 +53,7 @@ export default function Moveis() {
         <Separator />
       </DivTitulo>
       <DivProdutos>
-        {dataOfertas.map((item) => (
+        {dataProdutosFilter?.map((item) => (
           <Produto data={item} />
         ))}
       </DivProdutos>

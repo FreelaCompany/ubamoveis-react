@@ -93,7 +93,7 @@ export const ButtonPrev = styled.button`
   position: absolute;
   z-index: 999;
   left: 0;
-  top: 60%;
+  top: 50%;
   transition: 300ms ease;
 
   &:hover {
@@ -106,7 +106,7 @@ export const ButtonPrev = styled.button`
   }
 
   @media screen and (max-width: 680px) {
-    left: 48px;
+    left: 0;
     top: 40%;
   }
 `;
@@ -119,7 +119,7 @@ export const ButtonNext = styled.button`
   position: absolute;
   z-index: 999;
   right: 0;
-  top: 60%;
+  top: 50%;
   transition: 300ms ease;
 
   &:hover {

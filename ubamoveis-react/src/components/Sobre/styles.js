@@ -2,15 +2,18 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 497px;
-  max-height: 497px;
+  background-color: #f3f3f3;
   padding: 80px 140px;
+`;
+
+export const Content = styled.div`
+  max-width: 1228px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
   flex-wrap: wrap;
-  background-color: #f3f3f3;
+  height: 385px;
+  max-height: 385px;
 `;
 
 export const Titulo = styled.h1`
@@ -33,10 +36,10 @@ export const Paragraph = styled.p`
   line-height: 20px;
   color: #000;
   margin-top: 24px;
-  width: 385px;
+  width: 340px;
 
   &:nth-child(5) {
-    margin-top: 60px;
+    margin-top: 125px;
   }
 
   &:last-child {
