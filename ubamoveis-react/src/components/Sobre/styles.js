@@ -14,6 +14,7 @@ export const Content = styled.div`
   flex-wrap: wrap;
   height: 385px;
   max-height: 385px;
+  margin: 0 auto;
 `;
 
 export const Titulo = styled.h1`
