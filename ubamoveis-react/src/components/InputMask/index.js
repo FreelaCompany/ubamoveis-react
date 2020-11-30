@@ -23,7 +23,7 @@ export default function InputMask({
       if (rawTelefone.length > 10) {
         mask = "(99) 99999-9999";
       } else {
-        mask = "(99) 9999-9999?";
+        mask = "(99) 99999-999?";
       }
       formatChars = { 9: "[0-9]", "?": "[0-9]" };
       break;

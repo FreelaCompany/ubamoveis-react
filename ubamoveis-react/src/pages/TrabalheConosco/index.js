@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import TrabalheConoscoActions from "../../store/ducks/trabalhe-conosco";
+
 import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
+import { Form as unForm } from "@unform/web";
 import { FaSpinner } from "react-icons/fa";
 import Select from "react-select";
 
@@ -30,21 +34,38 @@ import TrabalheConoscoImg from "../../assets/images/trabalhe_conosco_interna.png
 
 export default function TrabalheConosco() {
   const inputRef = useRef(null);
+  const { loading } = useSelector((state) => state.trabalheConosco);
   const [sexoSeleted, setSexoSelected] = useState({
     value: "",
     label: "",
   });
-  const [attach, setAttach] = useState(undefined);
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [endereco, setEndereco] = useState("");
+  const [dataNascimento, setDataNascimento] = useState("");
 
-  const schema = Yup.object().shape({
-    nome: Yup.string().required("Obrigatório"),
-    email: Yup.string().email("E-mail inválido").required("Obrigatório"),
-    telefone: Yup.string().required("Obrigatório"),
-  });
+  const [attach, setAttach] = useState(undefined);
 
   const dispatch = useDispatch();
 
-  function handleSubmit(data) {}
+  async function handleSubmit(data) {
+    try {
+      const formData = new FormData();
+
+      formData.append("nome", nome);
+      formData.append("email", email);
+      formData.append("telefone", telefone);
+      formData.append("endereco", endereco);
+      formData.append("sexo", sexoSeleted.value === "Masculino" ? "M" : "F");
+      formData.append("data_nascimento", dataNascimento);
+      formData.append("curriculo", attach);
+
+      dispatch(TrabalheConoscoActions.trabalheConoscoRequest(formData));
+    } catch (err) {
+      return err.message;
+    }
+  }
 
   const sexo = [
     { value: "Masculino", label: "Masculino" },
@@ -58,6 +79,7 @@ export default function TrabalheConosco() {
   function handleFile() {
     return inputRef.current.click();
   }
+
   return (
     <>
       <Menu />
@@ -75,24 +97,41 @@ export default function TrabalheConosco() {
         </SubTitulo>
       </DivTitulo>
       <DivForm>
-        <Form onSubmit={handleSubmit} schema={schema}>
+        <Form onSubmit={handleSubmit}>
           <Line>
             <label htmlFor="nome">Nome Completo:</label>
-            <Input name="nome" id="nome" />
+            <Input
+              name="nome"
+              id="nome"
+              onChange={(text) => setNome(text.target.value)}
+            />
           </Line>
           <Line>
             <Column>
               <label htmlFor="email">E-mail:</label>
-              <Input name="email" id="email" />
+              <Input
+                name="email"
+                id="email"
+                onChange={(text) => setEmail(text.target.value)}
+              />
             </Column>
             <Column>
               <label htmlFor="celular">Telefone:</label>
-              <InputMask type="telefone" name="telefone" id="celular" />
+              <InputMask
+                type="telefone"
+                name="telefone"
+                onChange={(text) => setTelefone(text.target.value)}
+                id="celular"
+              />
             </Column>
           </Line>
           <Line>
             <label htmlFor="endereco">Endereço:</label>
-            <Input name="endereco" id="endereco" />
+            <Input
+              name="endereco"
+              id="endereco"
+              onChange={(text) => setEndereco(text.target.value)}
+            />
           </Line>
           <Line>
             <Column>
@@ -114,6 +153,7 @@ export default function TrabalheConosco() {
                 type="date"
                 name="dataNascimento"
                 id="dataNascimento"
+                onChange={(text) => setDataNascimento(text.target.value)}
               />
             </Column>
           </Line>
@@ -143,13 +183,12 @@ export default function TrabalheConosco() {
             </ContainerInputFile>
           </Line>
           <SendButton>
-            {/* {loading && (
+            {loading && (
               <Spinner>
                 <FaSpinner />
               </Spinner>
             )}
-            {!loading && "Criar Conta"} */}
-            Enviar curriculo
+            {!loading && "Enviar curriculo"}
           </SendButton>
         </Form>
       </DivForm>

@@ -89,7 +89,7 @@ export default function ContainerSlide({ data }) {
       </DivControls>
       <Swiper {...params}>
         {dataProdutos?.map((slide) => (
-          <DivProduto key={slide.id}>
+          <DivProduto key={slide.id_produto}>
             <img src={slide.foto} alt="Slider" />
             <Separator />
             <DivPrice>
