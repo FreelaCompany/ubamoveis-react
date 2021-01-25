@@ -12,6 +12,10 @@ import { news } from "./newsletter";
 import { TrabalheConoscoTypes } from "../ducks/trabalhe-conosco";
 import { trabalheConosco } from "./trabalhe-conosco";
 
+//banner
+import { BannerTypes } from "../ducks/banner";
+import { banner } from "./banner";
+
 export default function* rootSaga() {
   yield all([
     //produtos
@@ -22,5 +26,8 @@ export default function* rootSaga() {
 
     //trabalhe-conosco
     takeLatest(TrabalheConoscoTypes.TRABALHE_CONOSCO_REQUEST, trabalheConosco),
+
+    //banner
+    takeLatest(BannerTypes.BANNER_REQUEST, banner),
   ]);
 }

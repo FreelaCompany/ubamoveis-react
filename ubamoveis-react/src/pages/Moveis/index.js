@@ -53,8 +53,8 @@ export default function Moveis() {
         <Separator />
       </DivTitulo>
       <DivProdutos>
-        {dataProdutosFilter?.map((item) => (
-          <Produto data={item} />
+        {dataProdutosFilter?.slice(0, 9).map((item) => (
+          <Produto data={item} key={item.id_produto} />
         ))}
       </DivProdutos>
       <Newsletter />

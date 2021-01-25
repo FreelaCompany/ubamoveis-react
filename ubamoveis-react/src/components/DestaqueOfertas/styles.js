@@ -2,11 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  margin: 48px 0;
+  margin: 48px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 376px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export const Titulo = styled.h1`
@@ -14,6 +19,10 @@ export const Titulo = styled.h1`
   font-family: "DosisLight";
   font-size: 36px;
   line-height: 46px;
+
+  @media (max-width: 440px) {
+    font-size: 30px;
+  }
 `;
 
 export const TituloStrong = styled.span`
@@ -21,6 +30,9 @@ export const TituloStrong = styled.span`
   font-family: "DosisBold";
   font-size: 36px;
   line-height: 46px;
+  @media (max-width: 440px) {
+    font-size: 30px;
+  }
 `;
 
 export const Separator = styled.div`
@@ -36,4 +48,6 @@ export const Obs = styled.p`
   font-size: 16px;
   line-height: 20px;
   color: #737373;
+  width: 90%;
+  text-align: center;
 `;

@@ -123,8 +123,8 @@ export default function Modulados() {
       </DivTitulo>
 
       <DivProdutos>
-        {dataProdutosFilter?.map((item) => (
-          <Produto data={item} />
+        {dataProdutosFilter?.slice(0, 6).map((item) => (
+          <Produto data={item} key={item.id_produto} />
         ))}
       </DivProdutos>
       <Newsletter />

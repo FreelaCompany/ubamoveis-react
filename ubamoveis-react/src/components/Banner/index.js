@@ -1,35 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Swiper from "react-id-swiper";
+
+import BannerActions from "../../store/ducks/banner";
+import { useDispatch, useSelector } from "react-redux";
 
 import "swiper/css/swiper.css";
 
 import {
   Container,
   Slide,
+  SlideMobile,
   ButtonPrev,
   ButtonNext,
-  DivTitulo,
-  Titulo,
-  Descricao,
-  DivPreco,
-  Preco,
-  PrecoSmall,
-  Pagamento,
-  OfertaNumero,
 } from "./styles";
 
-import banner0 from "../../assets/images/bg1.png";
 import btnNext from "../../assets/images/btnNext.png";
 import btnPrev from "../../assets/images/btnPrev.png";
-import btnOferta from "../../assets/images/btnOfertaBanner.png";
 
 export default function Banner() {
   const [swiper, updateSwiper] = useState(null);
 
+  const dispatch = useDispatch();
+  const { data: dataBanner } = useSelector((state) => state.banner);
+
+  async function handleListBanner() {
+    dispatch(BannerActions.bannerRequest());
+  }
+
+  useEffect(() => {
+    handleListBanner();
+  }, []);
+
   const params = {
     loop: true,
+    observer: true,
     autoplay: {
-      delay: 8500,
+      delay: 3500,
       disableOnInteraction: false,
     },
   };
@@ -48,10 +54,13 @@ export default function Banner() {
 
   return (
     <Container id="banner">
-      <Swiper getSwiper={updateSwiper} {...params}>
-        <a>
-          <Slide url={banner0} />
-        </a>
+      <Swiper getSwiper={updateSwiper} {...params} shouldSwiperUpdate>
+        {dataBanner?.map((banner) => (
+          <a href={banner.link} target="_blank" key={banner.id_banner}>
+            <Slide url={banner.banner} />
+            <SlideMobile url={banner.banner_mobile} />
+          </a>
+        ))}
       </Swiper>
       <ButtonPrev onClick={goPrev}>
         <img src={btnPrev} alt="" />

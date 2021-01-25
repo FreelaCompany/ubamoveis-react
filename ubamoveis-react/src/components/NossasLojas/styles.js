@@ -36,6 +36,11 @@ export const DivLojas = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 818px;
+
+  @media (max-width: 1099px) {
+    flex-direction: column;
+    width: unset;
+  }
 `;
 
 export const Loja = styled.div`
@@ -44,6 +49,11 @@ export const Loja = styled.div`
   justify-content: space-between;
   width: 246px;
   height: 180px;
+
+  @media (max-width: 1099px) {
+    height: 150px;
+    margin: 20px 0;
+  }
 `;
 
 export const NomeLoja = styled.h1`
@@ -70,7 +80,8 @@ export const WhatsappLoja = styled.p`
 export const SeparatorLarge = styled.span`
   background-color: rgba(255, 255, 255, 0.18);
   height: 1px;
-  width: 818px;
+  width: 90%;
+  max-width: 818px;
   margin: 50px 0 40px 0;
 `;
 
@@ -81,6 +92,15 @@ export const DivPagamento = styled.div`
   align-items: center;
   width: 818px;
   height: 82px;
+
+  @media (max-width: 1099px) {
+    flex-direction: column;
+    width: 90%;
+
+    img {
+      width: 90% !important;
+    }
+  }
 `;
 
 export const TituloPagamento = styled.p`
@@ -88,4 +108,5 @@ export const TituloPagamento = styled.p`
   font-family: "DosisBold";
   font-size: 18px;
   line-height: 22px;
+  text-align: center;
 `;

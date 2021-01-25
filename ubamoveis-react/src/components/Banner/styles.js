@@ -4,6 +4,10 @@ import { colors } from "../../styles/colors";
 export const Container = styled.section`
   width: 100%;
   height: 671px;
+
+  @media (max-width: 500px) {
+    height: 382px;
+  }
 `;
 
 export const Slide = styled.div`
@@ -15,6 +19,25 @@ export const Slide = styled.div`
   background: ${({ url }) =>
     url ? `url(${url}) no-repeat center center;` : `none`};
   background-size: cover;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+
+export const SlideMobile = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 382px;
+  background: ${({ url }) =>
+    url ? `url(${url}) no-repeat center center;` : `none`};
+  background-size: cover;
+
+  @media (min-width: 500px) {
+    display: none;
+  }
 `;
 
 export const DivTitulo = styled.div`
@@ -93,7 +116,7 @@ export const ButtonPrev = styled.button`
   position: absolute;
   z-index: 999;
   left: 0;
-  top: 50%;
+  top: 430px;
   transition: 300ms ease;
 
   &:hover {
@@ -101,7 +124,6 @@ export const ButtonPrev = styled.button`
   }
 
   @media screen and (max-width: 1100px) {
-    transform: scale(1.3);
     right: 154px;
   }
 
@@ -119,7 +141,7 @@ export const ButtonNext = styled.button`
   position: absolute;
   z-index: 999;
   right: 0;
-  top: 50%;
+  top: 430px;
   transition: 300ms ease;
 
   &:hover {
@@ -127,12 +149,9 @@ export const ButtonNext = styled.button`
   }
 
   @media screen and (max-width: 1100px) {
-    transform: scale(1.3);
-    right: 154px;
   }
 
   @media screen and (max-width: 680px) {
-    right: 48px;
     top: 40%;
   }
 `;

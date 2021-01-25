@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/colors";
 
 export const Container = styled.section`
   width: 100%;
   max-width: 1390px;
-  height: 810px;
+  height: 715px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,49 +11,39 @@ export const Container = styled.section`
   position: relative;
   margin: 0 auto;
 
-  .swiper-container {
-    width: 100%;
-    height: 100%;
-    max-width: 1220px;
+  @media (max-width: 320px) {
+    height: 500px;
   }
-
-  .swiper-slide {
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
+  @media (min-width: 321px) and (max-width: 576px) {
+    height: 560px;
   }
-
-  .swiper-pagination {
-    position: absolute;
-    text-align: center;
-    margin-top: 20px;
-    bottom: 10px;
+  @media (min-width: 577px) and (max-width: 991px) {
   }
-
-  .swiper-pagination-bullet {
-    border: 2px solid #747474;
+  @media (min-width: 992px) and (max-width: 1199px) {
+    height: 650px;
   }
-
-  .swiper-pagination-bullet-active {
-    background: #000;
-    border: 2px solid #000;
+  @media (min-width: 1200px) {
   }
 `;
 
-export const Slide = styled.div`
+export const DivDestaques = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
-  max-width: 385px;
-  height: 648px;
-  background-color: #f3f3f3;
-  border: 1px solid #e5e5e5;
-  margin: 0 16px;
+  height: 100%;
+  max-width: 1220px;
+  justify-content: center;
 
-  img {
-    width: 100%;
+  @media (max-width: 1064px) {
+    width: 92%;
+    height: 100%;
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
+  @media (min-width: 1065px) and (max-width: 1199px) {
+    width: 90%;
+    max-width: 90%;
+  }
+  @media (min-width: 1200px) {
   }
 `;
 
@@ -65,6 +54,10 @@ export const DivControls = styled.div`
   flex-direction: row;
   margin-bottom: 27px;
   justify-content: space-between;
+
+  @media (max-width: 376px) {
+    width: 250px;
+  }
 `;
 
 export const Control = styled.h1`
@@ -78,109 +71,6 @@ export const Control = styled.h1`
   cursor: pointer;
 `;
 
-export const Descricao = styled.p`
-  font-family: "SourceSansProRegular";
-  font-size: 16px;
-  line-height: 20px;
-  color: #fff;
-`;
-
-export const DivPreco = styled.div`
-  width: 202px;
-  height: 88px;
-  position: absolute;
-  left: 536px;
-  top: 523px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-export const Preco = styled.h1`
-  font-family: "DosisBold";
-  font-size: 51px;
-  line-height: 64px;
-  color: #fff;
-`;
-
-export const PrecoSmall = styled.span`
-  font-family: "DosisBold";
-  font-size: 24px;
-  line-height: 31px;
-  color: #fff;
-`;
-
-export const Pagamento = styled.p`
-  font-family: "SourceSansProRegular";
-  font-size: 19px;
-  line-height: 24px;
-  color: #fff;
-`;
-
-export const OfertaNumero = styled.a`
-  width: 177px;
-  height: 52px;
-  position: absolute;
-  right: 200px;
-  bottom: 78px;
-  background: ${({ src }) =>
-    src ? `url(${src}) no-repeat center center;` : `none`};
-  background-size: cover;
-`;
-
-export const ButtonPrev = styled.button`
-  content: "Teste";
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  color: ${colors.white};
-  position: absolute;
-  z-index: 999;
-  left: 0;
-  top: 50%;
-  transition: 300ms ease;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-
-  @media screen and (max-width: 1100px) {
-    transform: scale(1.3);
-    right: 154px;
-  }
-
-  @media screen and (max-width: 680px) {
-    left: 48px;
-    top: 40%;
-  }
-`;
-
-export const ButtonNext = styled.button`
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  color: ${colors.white};
-  position: absolute;
-  z-index: 999;
-  right: 0;
-  top: 50%;
-  transition: 300ms ease;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-
-  @media screen and (max-width: 1100px) {
-    transform: scale(1.3);
-    right: 154px;
-  }
-
-  @media screen and (max-width: 680px) {
-    right: 48px;
-    top: 40%;
-  }
-`;
-
 export const DivProduto = styled.div`
   display: flex;
   flex-direction: column;
@@ -190,11 +80,281 @@ export const DivProduto = styled.div`
   height: 648px;
   background-color: #f3f3f3;
   border: 1px solid #e5e5e5;
-  margin: 0 16px 48px 16px;
+  margin: 0 16px 0 16px;
   padding: 26px 32px 42px 32px;
 
   img {
-    width: 354px;
-    height: 354px;
+    width: 326px;
+    height: 326px;
+  }
+
+  @media (max-width: 320px) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 225px;
+    height: 440px;
+    background-color: #f3f3f3;
+    border: 1px solid #e5e5e5;
+    margin: 0 16px 0 16px;
+    padding: 26px 32px 42px 32px;
+
+    img {
+      width: 165px;
+      height: 165px;
+    }
+  }
+  @media (min-width: 321px) and (max-width: 576px) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 300px;
+    height: 500px;
+    background-color: #f3f3f3;
+    border: 1px solid #e5e5e5;
+    margin: 0 16px 0 16px;
+    padding: 26px 32px 42px 32px;
+
+    img {
+      width: 100%;
+      height: 190px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    max-width: 325px;
+    height: 546px;
+
+    img {
+      width: 265px;
+      height: 265px;
+    }
+  }
+  @media (min-width: 1200px) {
+  }
+`;
+
+export const Separator = styled.div`
+  height: 1px;
+  width: 100%;
+  background-color: #8a8a8a;
+`;
+
+export const SeparatorLight = styled.div`
+  height: 1px;
+  width: 100%;
+  background-color: #d9d9d9;
+`;
+
+export const DivPrice = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 0;
+  height: 136px;
+
+  @media (max-width: 320px) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 24px 0;
+    height: 136px;
+  }
+  @media (min-width: 321px) and (max-width: 576px) {
+    align-items: flex-start;
+  }
+`;
+
+export const Title = styled.h1`
+  font-family: "DosisSemiBold";
+  font-size: 22px;
+  line-height: 28px;
+  color: #000;
+  text-transform: uppercase;
+
+  @media (max-width: 320px) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+`;
+
+export const Price = styled.h1`
+  font-family: "SourceSansProSemiBold";
+  font-size: 20px;
+  line-height: 25px;
+  color: #d24242;
+  text-transform: uppercase;
+  text-align: left;
+`;
+
+export const Valid = styled.p`
+  font-family: "SourceSansProRegular";
+  font-size: 16px;
+  line-height: 20px;
+  color: #737373;
+  text-transform: uppercase;
+  margin-top: 11px;
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+  }
+`;
+
+export const DivBottom = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 25px;
+  height: 60px;
+
+  @media (max-width: 320px) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: unset;
+    height: unset;
+  }
+`;
+
+export const DivInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 144px;
+  height: 60px;
+
+  @media (max-width: 320px) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 144px;
+    height: 60px;
+  }
+`;
+
+export const Info = styled.p`
+  font-family: "SourceSansProRegular";
+  font-size: 16px;
+  line-height: 20px;
+  color: #737373;
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+    line-height: 28px;
+    text-align: left;
+  }
+`;
+
+export const DivColors = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 138px;
+  height: 54px;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
+`;
+
+export const TitleColor = styled.h1`
+  font-family: "SourceSansProBold";
+  font-size: 15px;
+  line-height: 19px;
+  color: #000;
+  text-transform: uppercase;
+
+  @media (max-width: 576px) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+`;
+
+export const Colors = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 320px) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+`;
+
+export const Color = styled.div`
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: ${(props) => props.color};
+  margin-left: 6px;
+  margin-right: 6px;
+
+  &:first-child {
+    margin-left: 0;
   }
 `;

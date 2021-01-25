@@ -4,6 +4,13 @@ export const Container = styled.div`
   width: 100%;
   background-color: #f3f3f3;
   padding: 80px 140px;
+
+  @media (max-width: 1200px) {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Content = styled.div`
@@ -15,6 +22,15 @@ export const Content = styled.div`
   height: 385px;
   max-height: 385px;
   margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    height: unset;
+    max-height: unset;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    padding: 40px 0;
+  }
 `;
 
 export const Titulo = styled.h1`
@@ -29,6 +45,11 @@ export const SubTitulo = styled.p`
   font-size: 24px;
   line-height: 31px;
   color: #d9a423;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    text-align: justify;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -46,6 +67,18 @@ export const Paragraph = styled.p`
   &:last-child {
     margin: 0;
   }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    text-align: justify;
+    &:nth-child(5) {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 `;
 
 export const TituloFrete = styled.h1`
@@ -55,6 +88,12 @@ export const TituloFrete = styled.h1`
   color: #000;
   width: 386px;
   height: 86px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin-top: 20px;
+    height: unset;
+  }
 `;
 
 export const DivList = styled.div`

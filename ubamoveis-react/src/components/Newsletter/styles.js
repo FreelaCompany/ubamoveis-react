@@ -7,6 +7,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1099px) {
+    height: unset;
+    padding: 40px 0;
+  }
 `;
 
 export const Content = styled.div`
@@ -15,12 +20,31 @@ export const Content = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 1099px) {
+    width: 90%;
+    img {
+      max-width: 323px;
+      width: 90%;
+      height: 125px;
+    }
+    flex-direction: column;
+    height: unset;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const DivInput = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 1099px) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
 export const LabelInput = styled.p`
@@ -30,12 +54,38 @@ export const LabelInput = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 18px;
   line-height: 23px;
+
+  @media (max-width: 1099px) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 20px;
+    width: 90%;
+  }
 `;
 
 export const Input = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 1099px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+
+    input {
+      width: 100% !important;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 0 !important;
+    }
+  }
 
   input {
     width: 437px;

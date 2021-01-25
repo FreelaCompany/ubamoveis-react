@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Swiper from "react-id-swiper";
-
-import "swiper/css/swiper.css";
+import React, { useState } from "react";
 
 import {
   Container,
-  ButtonPrev,
-  ButtonNext,
   DivControls,
   Control,
   DivProduto,
-} from "./styles";
-
-import {
+  DivDestaques,
   Separator,
   DivPrice,
   Title,
@@ -26,53 +19,12 @@ import {
   TitleColor,
   Colors,
   Color,
-} from "../../Produto/styles";
-
-import btnNext from "../../../assets/images/ofertas/destaRightButton.png";
-import btnPrev from "../../../assets/images/ofertas/destaLeftButton.png";
+} from "./styles";
 
 export default function ContainerSlide({ data }) {
-  const [swiper, updateSwiper] = useState(null);
   const [categoria, setCategoria] = useState(1);
 
   const dataProdutos = data?.filter((item) => item.id_categoria === categoria);
-
-  const params = {
-    swiper,
-    initialSlide: 0,
-    loop: true,
-    getSwiper: updateSwiper,
-    // autoplay: {
-    //   delay: 8500,
-    //   disableOnInteraction: false,
-    // },
-    slidesPerView: 3,
-    // slidesPerGroup: 3,
-    spaceBetween: 7,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: ".button-next",
-      prevEl: ".button-prev",
-      el: ".swiper-pagination",
-    },
-  };
-
-  const goNext = () => {
-    if (swiper !== null) {
-      swiper.slideNext();
-    }
-  };
-
-  const goPrev = () => {
-    if (swiper !== null) {
-      swiper.slidePrev();
-    }
-  };
 
   return (
     <Container id="banner">
@@ -87,14 +39,14 @@ export default function ContainerSlide({ data }) {
           Colchões
         </Control>
       </DivControls>
-      <Swiper {...params}>
-        {dataProdutos?.map((slide) => (
+      <DivDestaques>
+        {dataProdutos?.slice(0, 3).map((slide) => (
           <DivProduto key={slide.id_produto}>
             <img src={slide.foto} alt="Slider" />
             <Separator />
             <DivPrice>
               <Title>{slide.nome}</Title>
-              <Price>R$ {slide.preco}</Price>
+              {categoria !== 2 && <Price>R$ {slide.preco}</Price>}
               <Valid>Preço válido até {slide.validade_preco}</Valid>
             </DivPrice>
             <SeparatorLight />
@@ -116,13 +68,7 @@ export default function ContainerSlide({ data }) {
             </DivBottom>
           </DivProduto>
         ))}
-      </Swiper>
-      <ButtonPrev onClick={goPrev}>
-        <img src={btnPrev} />
-      </ButtonPrev>
-      <ButtonNext onClick={goNext}>
-        <img src={btnNext} />
-      </ButtonNext>
+      </DivDestaques>
     </Container>
   );
 }
