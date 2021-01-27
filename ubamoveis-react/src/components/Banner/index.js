@@ -54,14 +54,16 @@ export default function Banner() {
 
   return (
     <Container id="banner">
-      <Swiper getSwiper={updateSwiper} {...params} shouldSwiperUpdate>
-        {dataBanner?.map((banner) => (
-          <a href={banner.link} target="_blank" key={banner.id_banner}>
-            <Slide url={banner.banner} />
-            <SlideMobile url={banner.banner_mobile} />
-          </a>
-        ))}
-      </Swiper>
+      {dataBanner && (
+        <Swiper getSwiper={updateSwiper} {...params} shouldSwiperUpdate>
+          {dataBanner?.map((banner) => (
+            <a href={banner.link} target="_blank" key={banner.id_banner}>
+              <Slide url={banner.banner} />
+              <SlideMobile url={banner.banner_mobile} />
+            </a>
+          ))}
+        </Swiper>
+      )}
       <ButtonPrev onClick={goPrev}>
         <img src={btnPrev} alt="" />
       </ButtonPrev>
