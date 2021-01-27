@@ -20,8 +20,6 @@ import {
 
 import ColchoesImg from "../../assets/images/colchoes_interna.png";
 
-import { dataOfertas } from "../../data/destaqueOfertas";
-
 export default function Colchoes() {
   const dispatch = useDispatch();
   const { data: dataProdutos } = useSelector((state) => state.produtosList);
@@ -32,7 +30,7 @@ export default function Colchoes() {
 
   useEffect(() => {
     handleListProdutos();
-  }, []);
+  });
 
   const dataProdutosFilter = dataProdutos?.filter(
     (item) => item.id_categoria === 3

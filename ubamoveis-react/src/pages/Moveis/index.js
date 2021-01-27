@@ -20,8 +20,6 @@ import {
 
 import MoveisImg from "../../assets/images/moveis_interna.png";
 
-import { dataOfertas } from "../../data/destaqueOfertas";
-
 export default function Moveis() {
   const dispatch = useDispatch();
   const { data: dataProdutos } = useSelector((state) => state.produtosList);
@@ -32,7 +30,7 @@ export default function Moveis() {
 
   useEffect(() => {
     handleListProdutos();
-  }, []);
+  });
 
   const dataProdutosFilter = dataProdutos?.filter(
     (item) => item.id_categoria === 1

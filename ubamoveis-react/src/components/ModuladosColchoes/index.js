@@ -10,10 +10,10 @@ function ModuladosColchoes() {
   return (
     <Container>
       <Link to="/modulados">
-        <img src={ModuladosHome} />
+        <img src={ModuladosHome} alt="" />
       </Link>
       <Link to="/colchoes">
-        <img src={ColchaoHome} />
+        <img src={ColchaoHome} alt="" />
       </Link>
     </Container>
   );

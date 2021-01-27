@@ -30,8 +30,6 @@ import {
 import imgVantagem from "../../assets/images/imgVantagem.png";
 import ModuladosImg from "../../assets/images/modulados_interna.png";
 
-import { dataOfertas } from "../../data/destaqueOfertas";
-
 export default function Modulados() {
   const dispatch = useDispatch();
   const [subcategoria, setSubCategoria] = useState(1);
@@ -43,7 +41,7 @@ export default function Modulados() {
 
   useEffect(() => {
     handleListProdutos();
-  }, []);
+  });
 
   const dataProdutosFilter = dataProdutos?.filter(
     (item) => item.id_categoria === 2 && item.id_subcategoria === subcategoria

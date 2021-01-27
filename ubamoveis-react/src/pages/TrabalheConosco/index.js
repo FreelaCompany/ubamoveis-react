@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import TrabalheConoscoActions from "../../store/ducks/trabalhe-conosco";
 
 import { Form, Input } from "@rocketseat/unform";
-import * as Yup from "yup";
-import { Form as unForm } from "@unform/web";
 import { FaSpinner } from "react-icons/fa";
 import Select from "react-select";
 

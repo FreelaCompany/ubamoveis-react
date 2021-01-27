@@ -51,6 +51,9 @@ export default function InputMask({
       mask = "99/99/9999";
       formatChars = { 9: "[0-9]", "?": "[0-9]" };
       break;
+    default:
+      mask = "99/99/9999";
+      formatChars = { 9: "[0-9]", "?": "[0-9]" };
   }
 
   function handleMask(event) {
@@ -75,7 +78,7 @@ export default function InputMask({
     if (value !== undefined) {
       setRealValue(value);
     }
-  }, [ref.current, fieldName, value]);
+  }, [fieldName, value, defaultValue, registerField]);
 
   return (
     <>

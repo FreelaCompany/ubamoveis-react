@@ -16,7 +16,7 @@ export default function DestaqueOfertas() {
 
   useEffect(() => {
     handleListProdutos();
-  }, []);
+  });
 
   return (
     <Container>

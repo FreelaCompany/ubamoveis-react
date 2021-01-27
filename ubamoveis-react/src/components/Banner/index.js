@@ -29,7 +29,7 @@ export default function Banner() {
 
   useEffect(() => {
     handleListBanner();
-  }, []);
+  });
 
   const params = {
     loop: true,
@@ -57,7 +57,11 @@ export default function Banner() {
       {dataBanner && (
         <Swiper getSwiper={updateSwiper} {...params} shouldSwiperUpdate>
           {dataBanner?.map((banner) => (
-            <a href={banner.link} target="_blank" key={banner.id_banner}>
+            <a
+              href={banner.link}
+              target="_blank"
+              key={banner.id_banner}
+              rel="noopener noreferrer">
               <Slide url={banner.banner} />
               <SlideMobile url={banner.banner_mobile} />
             </a>

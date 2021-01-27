@@ -11,7 +11,10 @@ export default function Footer() {
         <Direitos>Ubá Móveis - Todos os direitos reservados.</Direitos>
         <Dev>
           Desenvolvido por:{" "}
-          <a href="" target="_blank">
+          <a
+            href="http://www.mappublicidade.com.br/"
+            target="_blank"
+            rel="noopener noreferrer">
             <img src={map} alt="" />
           </a>
         </Dev>
