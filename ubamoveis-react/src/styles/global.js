@@ -25,8 +25,6 @@ import SourceSansProSemiBoldItalic from "../assets/fonts/SourceSansPro-SemiboldI
 
 const GlobalStyle = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap');
-
 
 @font-face {
     font-family: "DosisBold";

@@ -65,7 +65,7 @@ export default function Lojas() {
   );
   const [selected, setSelected] = useState({});
 
-  const { innerWidth: width, innerHeight: height } = window;
+  const { innerWidth: width } = window;
 
   const onSelect = (item) => {
     setSelected(item);
