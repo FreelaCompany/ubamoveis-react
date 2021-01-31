@@ -4,6 +4,7 @@ export const ContainerProduto = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 415px;
   height: 648px;
@@ -15,6 +16,29 @@ export const ContainerProduto = styled.div`
   img {
     width: 348px;
     height: 348px;
+  }
+
+  @media (max-width: 320px) {
+    width: 90%;
+    max-width: 415px;
+    height: 540px;
+    padding: 26px 20px 42px 20px;
+
+    img {
+      width: 225px;
+      height: 225px;
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: 575px) {
+    width: 90%;
+    max-width: 415px;
+    height: 575px;
+
+    img {
+      width: 270px;
+      height: 270px;
+    }
   }
 `;
 
@@ -28,6 +52,9 @@ export const SeparatorLight = styled.div`
   height: 1px;
   width: 100%;
   background-color: #d9d9d9;
+  @media (max-width: 320px) {
+    width: 90%;
+  }
 `;
 
 export const DivPrice = styled.div`
@@ -36,6 +63,7 @@ export const DivPrice = styled.div`
   justify-content: center;
   padding: 24px 0;
   height: 136px;
+  align-self: flex-start;
 `;
 
 export const Title = styled.h1`
@@ -44,6 +72,11 @@ export const Title = styled.h1`
   line-height: 28px;
   color: #000;
   text-transform: uppercase;
+
+  @media (max-width: 320px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 `;
 
 export const Price = styled.h1`
@@ -52,6 +85,10 @@ export const Price = styled.h1`
   line-height: 25px;
   color: #d24242;
   text-transform: uppercase;
+  @media (max-width: 320px) {
+    font-size: 17px;
+    line-height: 22px;
+  }
 `;
 
 export const Valid = styled.p`
@@ -61,6 +98,11 @@ export const Valid = styled.p`
   color: #737373;
   text-transform: uppercase;
   margin-top: 11px;
+
+  @media (max-width: 320px) {
+    font-size: 13px;
+    line-height: 16px;
+  }
 `;
 
 export const DivBottom = styled.div`
@@ -78,6 +120,10 @@ export const DivInfo = styled.div`
   justify-content: space-between;
   width: 144px;
   height: 60px;
+
+  @media (max-width: 380px) {
+    height: 50px;
+  }
 `;
 
 export const Info = styled.p`
@@ -85,14 +131,28 @@ export const Info = styled.p`
   font-size: 16px;
   line-height: 20px;
   color: #737373;
+
+  @media (max-width: 380px) {
+    font-size: 13px;
+    line-height: 17px;
+  }
 `;
 
 export const DivColors = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 138px;
+  width: 140px;
   height: 54px;
+
+  @media (max-width: 320px) {
+    width: 145px;
+  }
+
+  @media (min-width: 321px) and (max-width: 380px) {
+    font-size: 12px;
+    height: 40px;
+  }
 `;
 
 export const TitleColor = styled.h1`
@@ -101,6 +161,11 @@ export const TitleColor = styled.h1`
   line-height: 19px;
   color: #000;
   text-transform: uppercase;
+
+  @media (max-width: 380px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
 `;
 
 export const Colors = styled.div`
@@ -118,6 +183,15 @@ export const Color = styled.div`
   background-color: ${(props) => props.color};
   margin-left: 6px;
   margin-right: 6px;
+
+  @media (max-width: 380px) {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: ${(props) => props.color};
+    margin-left: 3px;
+    margin-right: 3px;
+  }
 
   &:first-child {
     margin-left: 0;

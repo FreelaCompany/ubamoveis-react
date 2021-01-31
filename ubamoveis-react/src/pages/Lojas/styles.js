@@ -5,6 +5,11 @@ export const TituloUnidades = styled.h1`
   font-family: "DosisBold";
   font-size: 36px;
   line-height: 46px;
+
+  @media (max-width: 440px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 `;
 
 export const Descricao = styled.span`
@@ -24,27 +29,37 @@ export const Separator = styled.div`
 
 export const DivUnidades = styled.div`
   width: 100%;
-
-  padding: 60px 140px;
+  padding: 40px 0;
 `;
 
 export const Content = styled.div`
-  width: 100%;
+  width: 90%;
   max-width: 1228px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Unidades = styled.div`
-  width: 385px;
+  width: 90%;
+  max-width: 385px;
   height: 405px;
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 1200px) {
+    margin-bottom: 40px;
+  }
+
   .selectCidade {
-    width: 305px;
+    width: 90%;
+    max-width: 305px;
     height: 52px;
     margin-bottom: 44px;
   }

@@ -22,12 +22,15 @@ import {
   LinhaVantagens,
   Vantagem,
   ImgVantagem,
+  ImgVantagem2,
   DivControls,
   Control,
   DivProdutos,
+  TagError,
 } from "./styles";
 
 import imgVantagem from "../../assets/images/imgVantagem.png";
+import imgVantagem2 from "../../assets/images/imgVantagem2.png";
 import ModuladosImg from "../../assets/images/modulados_interna.png";
 
 export default function Modulados() {
@@ -90,10 +93,13 @@ export default function Modulados() {
         <LinhaVantagens>
           <Vantagem>Traga a sua medida</Vantagem>
           <ImgVantagem src={imgVantagem} />
+          <ImgVantagem2 src={imgVantagem2} />
           <Vantagem>Realize os projetos e tenha orçamentos na hora</Vantagem>
           <ImgVantagem src={imgVantagem} />
+          <ImgVantagem2 src={imgVantagem2} />
           <Vantagem>Finalize a compra</Vantagem>
           <ImgVantagem src={imgVantagem} />
+          <ImgVantagem2 src={imgVantagem2} />
           <Vantagem>Agende sua entrega e montagem</Vantagem>
         </LinhaVantagens>
       </DivVantagens>
@@ -124,6 +130,11 @@ export default function Modulados() {
         {dataProdutosFilter?.slice(0, 6).map((item) => (
           <Produto data={item} key={item.id_produto} />
         ))}
+        {dataProdutosFilter?.length === 0 && (
+          <TagError>
+            Não existem produtos com essa categoria no momento.
+          </TagError>
+        )}
       </DivProdutos>
       <Newsletter />
       <NossasLojas />

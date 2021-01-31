@@ -65,13 +65,19 @@ export default function Lojas() {
   );
   const [selected, setSelected] = useState({});
 
+  const { innerWidth: width, innerHeight: height } = window;
+
   const onSelect = (item) => {
     setSelected(item);
   };
   const mapStyles = {
-    height: "500px",
-    width: "800px",
+    height:
+      width < 980 && width > 660 ? "300px" : width < 660 ? "250px" : "500px",
+    width:
+      width < 980 && width > 660 ? "500px" : width < 660 ? "300px" : "800px",
   };
+
+  console.log(width);
 
   function handleCidade(value) {
     switch (value.label) {
@@ -150,6 +156,7 @@ export default function Lojas() {
 
           <LoadScript googleMapsApiKey="AIzaSyCsw3_s3pdAJgaUWn8hFtwV7yg5wmKFkyY">
             <GoogleMap
+              className="mapa"
               mapContainerStyle={mapStyles}
               zoom={16}
               center={cidadeLocation}>

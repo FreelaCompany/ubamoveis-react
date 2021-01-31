@@ -2,13 +2,16 @@ import styled from "styled-components";
 
 export const DivTitulo = styled.div`
   width: 100%;
-  height: 95px;
   margin-top: 64px;
-  margin-bottom: 51px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 440px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 `;
 
 export const Titulo = styled.h1`
@@ -16,6 +19,9 @@ export const Titulo = styled.h1`
   font-family: "DosisLight";
   font-size: 36px;
   line-height: 46px;
+  @media (max-width: 440px) {
+    font-size: 30px;
+  }
 `;
 
 export const TituloStrong = styled.span`
@@ -23,6 +29,10 @@ export const TituloStrong = styled.span`
   font-family: "DosisBold";
   font-size: 36px;
   line-height: 46px;
+
+  @media (max-width: 440px) {
+    font-size: 30px;
+  }
 `;
 
 export const Separator = styled.div`

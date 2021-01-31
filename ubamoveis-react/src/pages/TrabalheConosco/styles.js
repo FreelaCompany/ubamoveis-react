@@ -31,11 +31,12 @@ export const Separator = styled.div`
 `;
 
 export const DivForm = styled.div`
-  width: 810px;
+  width: 90%;
+  max-width: 810px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0 auto 140px;
+  margin: 0 auto;
 
   .selectSexo {
     border-radius: 4px;
@@ -122,8 +123,10 @@ export const SubTitulo = styled.p`
   font-size: 18px;
   line-height: 23px;
   color: #000;
+
   margin-bottom: 33px;
-  width: 389px;
+  width: 90%;
+  max-width: 389px;
   height: 50px;
   text-align: center;
 `;
@@ -292,9 +295,17 @@ export const Arquivo = styled.div`
     line-height: 23px;
   }
 
-  @media only screen and (max-width: 767px) {
+  @media (max-width: 384px) {
     span {
       font-size: 14px;
+      padding: 8px;
+    }
+  }
+
+  @media (min-width: 385px) and (max-width: 767px) {
+    span {
+      font-size: 14px;
+      padding: 16px;
     }
   }
 `;
