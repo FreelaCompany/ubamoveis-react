@@ -1,7 +1,7 @@
 {
   "name": "ubamoveis-react",
   "homepage": "http://www.casabelavistavr.com.br/2020",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^1.13.0",
@@ -53,7 +53,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "patch": "yarn version --patch",
+    "end-sprint": "yarn version --minor",
+    "release": "yarn version --major"
   },
   "eslintConfig": {
     "extends": "react-app"
