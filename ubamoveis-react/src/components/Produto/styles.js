@@ -9,7 +9,6 @@ export const ContainerProduto = styled.div`
   max-width: 415px;
   height: 648px;
   background-color: #f3f3f3;
-  border: 1px solid #e5e5e5;
   margin: 0 16px 48px 16px;
   padding: 26px 32px 42px 32px;
 
