@@ -154,7 +154,7 @@ export default function Lojas() {
             </CidadeTelefone>
           </Unidades>
 
-          <LoadScript googleMapsApiKey="AIzaSyCsw3_s3pdAJgaUWn8hFtwV7yg5wmKFkyY">
+          <LoadScript googleMapsApiKey="AIzaSyB3iYXBKTf27MACNe7AJrthMse6Ug544gA">
             <GoogleMap
               className="mapa"
               mapContainerStyle={mapStyles}
