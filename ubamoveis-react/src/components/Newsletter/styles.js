@@ -21,12 +21,19 @@ export const Content = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
+  img {
+    max-width: 323px;
+    width: 90%;
+    height: 125px;
+  }
+
   @media (max-width: 1099px) {
     width: 90%;
     img {
       max-width: 323px;
       width: 90%;
       height: 125px;
+      object-fit: contain;
     }
     flex-direction: column;
     height: unset;
@@ -80,6 +87,8 @@ export const Input = styled.div`
       width: 100% !important;
       margin-top: 20px;
       margin-bottom: 20px;
+      font-weight: 400;
+      font-family: "SourceSansProRegular";
     }
 
     button {
@@ -93,7 +102,8 @@ export const Input = styled.div`
     padding: 15px;
     font-size: 16px;
     color: #000;
-    font-weight: 600;
+    font-weight: 400;
+    font-family: "SourceSansProRegular";
   }
 
   ::-webkit-input-placeholder {
