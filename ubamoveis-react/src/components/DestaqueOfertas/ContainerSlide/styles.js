@@ -189,6 +189,7 @@ export const DivPrice = styled.div`
   }
   @media (min-width: 321px) and (max-width: 576px) {
     align-items: flex-start;
+    height: unset;
   }
 `;
 
@@ -202,6 +203,11 @@ export const Title = styled.h1`
   @media (max-width: 320px) {
     font-size: 16px;
     line-height: 20px;
+    text-align: left;
+  }
+  @media (min-width: 321px) and (max-width: 576px) {
+    font-size: 14px;
+    line-height: 16px;
     text-align: left;
   }
 `;
@@ -289,7 +295,7 @@ export const Info = styled.p`
 
   @media (max-width: 576px) {
     font-size: 14px;
-    line-height: 28px;
+    line-height: 20px;
     text-align: left;
   }
 `;
