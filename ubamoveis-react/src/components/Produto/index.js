@@ -25,7 +25,9 @@ function Produto({ data }) {
       <DivPrice>
         <Title>{data.nome}</Title>
         {data.id_categoria !== 2 && <Price>R$ {data.preco}</Price>}
-        <Valid>Preço válido até {data.validade_preco}</Valid>
+        {data.id_categoria !== 2 && (
+          <Valid>Preço válido até {data.validade_preco}</Valid>
+        )}
       </DivPrice>
       <SeparatorLight />
       <DivBottom>

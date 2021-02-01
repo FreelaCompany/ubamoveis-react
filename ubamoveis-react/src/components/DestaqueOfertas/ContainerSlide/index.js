@@ -47,7 +47,9 @@ export default function ContainerSlide({ data }) {
             <DivPrice>
               <Title>{slide.nome}</Title>
               {categoria !== 2 && <Price>R$ {slide.preco}</Price>}
-              <Valid>Preço válido até {slide.validade_preco}</Valid>
+              {categoria !== 2 && (
+                <Valid>Preço válido até {slide.validade_preco}</Valid>
+              )}
             </DivPrice>
             <SeparatorLight />
             <DivBottom>
