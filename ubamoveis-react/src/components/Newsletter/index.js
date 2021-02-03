@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import NewsActions from "../../store/ducks/newsletter";
+import InputMask from "../InputMask";
 
 import { Container, Content, DivInput, LabelInput, Input } from "./styles";
 
@@ -34,10 +35,12 @@ export default function Newsletter() {
             exclusivos da Ubá Móveis.
           </LabelInput>
           <Input>
-            <input
-              type="text"
+            <InputMask
+              type="telefone"
+              name="telefone"
+              onChange={(text) => setTelefone(text.target.value)}
+              id="celular"
               placeholder="Insira seu WhatsApp"
-              onChange={(e) => setTelefone(e.target.value)}
             />
             <button type="button" onClick={() => handleSubmit()}>
               {loading ? "Enviando..." : "Cadastrar"}

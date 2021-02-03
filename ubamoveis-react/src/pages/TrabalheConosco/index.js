@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import TrabalheConoscoActions from "../../store/ducks/trabalhe-conosco";
@@ -32,7 +32,7 @@ import TrabalheConoscoImg from "../../assets/images/trabalhe_conosco_interna.png
 
 export default function TrabalheConosco() {
   const inputRef = useRef(null);
-  const { loading } = useSelector((state) => state.trabalheConosco);
+  const { loading, success } = useSelector((state) => state.trabalheConosco);
   const [sexoSeleted, setSexoSelected] = useState({
     value: "",
     label: "",
@@ -77,6 +77,14 @@ export default function TrabalheConosco() {
   function handleFile() {
     return inputRef.current.click();
   }
+
+  useEffect(() => {
+    if (!!success) {
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    }
+  }, [success]);
 
   return (
     <>

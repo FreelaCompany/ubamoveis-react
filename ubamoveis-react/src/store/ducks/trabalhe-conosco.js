@@ -18,6 +18,7 @@ export const INITIAL_STATE = {
   data: null,
   loading: false,
   error: null,
+  success: null,
 };
 
 /* Reducers */
@@ -28,6 +29,7 @@ export const requestTrabalheConosco = (state) =>
 export const successTrabalheConosco = (state, action) =>
   update(state, {
     loading: { $set: false },
+    success: { $set: true },
     data: { $set: action.data },
   });
 
