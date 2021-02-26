@@ -49,7 +49,6 @@ export const Content = styled.div`
 export const Unidades = styled.div`
   width: 90%;
   max-width: 385px;
-  height: 405px;
   display: flex;
   flex-direction: column;
 
@@ -126,4 +125,11 @@ export const NomeLoja = styled.h1`
   font-size: 26px;
   line-height: 33px;
   margin-bottom: 17px;
+`;
+
+export const QrCodeZap = styled.img`
+  width: 150px;
+  height: 150px;
+  margin: 10px 0 10px 0;
+  border-radius: 7px;
 `;

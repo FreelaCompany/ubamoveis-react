@@ -37,7 +37,7 @@ export default function Menu() {
     { label: "Volta Redonda", value: "(24) 99317-9372" },
     { label: "Barra Mansa", value: "(24) 99318-4972" },
     { label: "Barra do Piraí", value: "(24) 99317-8979" },
-    { label: "Bebê e Colchões", value: "(24) 99317-8064" },
+    { label: "Colchões", value: "(24) 99317-8064" },
   ];
   const [cidade, setCidade] = useState(cidadeOptions[0].value);
   const [cidadeLabel, setCidadeLabel] = useState(cidadeOptions[0].label);
@@ -61,7 +61,7 @@ export default function Menu() {
         setCidadeLabel("Barra do Piraí");
         setLinkWhats("https://wa.me/5524993178979");
         break;
-      case "Bebê e Colchões":
+      case "Colchões":
         setCidade("(24) 99317-8064");
         setCidadeLabel("Bebê e Colchões");
         setLinkWhats("https://wa.me/5524993178064");

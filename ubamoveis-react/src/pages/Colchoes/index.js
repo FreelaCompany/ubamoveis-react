@@ -30,7 +30,7 @@ export default function Colchoes() {
 
   useEffect(() => {
     handleListProdutos();
-  });
+  }, []);
 
   const dataProdutosFilter = dataProdutos?.filter(
     (item) => item.id_categoria === 3

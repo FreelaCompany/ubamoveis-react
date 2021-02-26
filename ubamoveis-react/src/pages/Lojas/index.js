@@ -26,9 +26,13 @@ import {
   EnderecoLoja,
   NomeLoja,
   Content,
+  QrCodeZap,
 } from "./styles";
 
 import LojasImg from "../../assets/images/lojas_interna.png";
+import qrVoltaRedonda from "../../assets/images/qr_voltaredonda.jpeg";
+import qrBarraDoPirai from "../../assets/images/qr_barradopirai.jpeg";
+import qrBarraMansa from "../../assets/images/qr_barramansa.jpeg";
 
 export default function Lojas() {
   const cidadeOptions = [
@@ -152,6 +156,16 @@ export default function Lojas() {
               <WhatsApp color="#F7BF3B" size={17} />
               <Telefone>{cidade}</Telefone>
             </CidadeTelefone>
+
+            <QrCodeZap
+              src={
+                cidadeLabel === "Volta Redonda"
+                  ? qrVoltaRedonda
+                  : cidadeLabel === "Barra Mansa"
+                  ? qrBarraMansa
+                  : qrBarraDoPirai
+              }
+            />
           </Unidades>
 
           <LoadScript googleMapsApiKey="AIzaSyB3iYXBKTf27MACNe7AJrthMse6Ug544gA">

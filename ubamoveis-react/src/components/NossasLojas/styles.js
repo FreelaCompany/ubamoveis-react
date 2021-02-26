@@ -48,10 +48,10 @@ export const Loja = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 246px;
-  height: 180px;
+  height: 260px;
 
   @media (max-width: 1099px) {
-    height: 150px;
+    height: 260px;
     margin: 20px 0;
   }
 `;
@@ -70,7 +70,7 @@ export const EnderecoLoja = styled.p`
   line-height: 20px;
 `;
 
-export const WhatsappLoja = styled.p`
+export const WhatsappLoja = styled.a`
   color: #fff;
   font-family: "DosisBold";
   font-size: 18px;
@@ -109,4 +109,22 @@ export const TituloPagamento = styled.p`
   font-size: 18px;
   line-height: 22px;
   text-align: center;
+`;
+
+export const QrCodeZap = styled.img`
+  width: 150px;
+  height: 150px;
+  margin: 10px 0 10px 0;
+  border-radius: 7px;
+`;
+
+export const DivImgPagamento = styled.div`
+  text-align: center;
+  width: 90%;
+  margin: 10px 0 10px 0;
+
+  p {
+    font-size: 14px;
+    line-height: 18px;
+  }
 `;

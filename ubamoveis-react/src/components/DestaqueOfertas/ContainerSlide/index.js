@@ -46,8 +46,10 @@ export default function ContainerSlide({ data }) {
             <Separator />
             <DivPrice>
               <Title>{slide.nome}</Title>
-              {categoria !== 2 && <Price>R$ {slide.preco}</Price>}
-              {categoria !== 2 && (
+              {categoria !== 2 && slide.mostrar_preco && (
+                <Price>R$ {slide.preco}</Price>
+              )}
+              {categoria !== 2 && slide.mostrar_preco && (
                 <Valid>Preço válido até {slide.validade_preco}</Valid>
               )}
             </DivPrice>

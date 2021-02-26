@@ -29,7 +29,7 @@ export default function Banner() {
 
   useEffect(() => {
     handleListBanner();
-  });
+  }, []);
 
   const params = {
     loop: true,
@@ -52,20 +52,28 @@ export default function Banner() {
     }
   };
 
+  function returnSlides(data) {
+    return data.link !== "null" ? (
+      <a
+        href={data.link}
+        target="_blank"
+        key={data.id_banner}
+        rel="noopener noreferrer">
+        <Slide url={data.banner} />
+        <SlideMobile url={data.banner_mobile} />
+      </a>
+    ) : (
+      <a key={data.id_banner} rel="noopener noreferrer">
+        <Slide url={data.banner} />
+        <SlideMobile url={data.banner_mobile} />
+      </a>
+    );
+  }
   return (
     <Container id="banner">
       {dataBanner && (
         <Swiper getSwiper={updateSwiper} {...params} shouldSwiperUpdate>
-          {dataBanner?.map((banner) => (
-            <a
-              href={banner.link}
-              target="_blank"
-              key={banner.id_banner}
-              rel="noopener noreferrer">
-              <Slide url={banner.banner} />
-              <SlideMobile url={banner.banner_mobile} />
-            </a>
-          ))}
+          {dataBanner?.map((banner) => returnSlides(banner))}
         </Swiper>
       )}
       <ButtonPrev onClick={goPrev}>

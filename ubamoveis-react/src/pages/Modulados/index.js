@@ -44,7 +44,7 @@ export default function Modulados() {
 
   useEffect(() => {
     handleListProdutos();
-  });
+  }, []);
 
   const dataProdutosFilter = dataProdutos?.filter(
     (item) => item.id_categoria === 2 && item.id_subcategoria === subcategoria

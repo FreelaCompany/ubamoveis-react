@@ -30,7 +30,7 @@ export default function Moveis() {
 
   useEffect(() => {
     handleListProdutos();
-  });
+  }, []);
 
   const dataProdutosFilter = dataProdutos?.filter(
     (item) => item.id_categoria === 1
