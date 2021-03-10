@@ -34,12 +34,29 @@ function Produto({ data }) {
       <SeparatorLight />
       <DivBottom>
         <DivInfo>
-          <Info>Altura: {data.altura}cm</Info>
-          <Info>Largura: {data.largura}cm</Info>
-          <Info>Profundidade: {data.profundidade}cm</Info>
+          {data.altura !== "null" && <Info>Altura: {data.altura}cm</Info>}
+          {data.largura !== "null" && <Info>Largura: {data.largura}cm</Info>}
+          {data.profundidade !== "null" && (
+            <Info>Profundidade: {data.profundidade}cm</Info>
+          )}
         </DivInfo>
         <DivColors>
-          <TitleColor>CORES DISPONÍVEIS:</TitleColor>
+          {data.cor1 !== "null" &&
+            data.cor2 === "null" &&
+            data.cor3 === "null" &&
+            data.cor4 === "null" && <TitleColor>CORES DISPONÍVEIS:</TitleColor>}
+          {data.cor1 !== "null" &&
+            data.cor2 !== "null" &&
+            data.cor3 === "null" &&
+            data.cor4 === "null" && <TitleColor>CORES DISPONÍVEIS:</TitleColor>}
+          {data.cor1 !== "null" &&
+            data.cor2 !== "null" &&
+            data.cor3 !== "null" &&
+            data.cor4 === "null" && <TitleColor>CORES DISPONÍVEIS:</TitleColor>}
+          {data.cor1 !== "null" &&
+            data.cor2 !== "null" &&
+            data.cor3 !== "null" &&
+            data.cor4 !== "null" && <TitleColor>CORES DISPONÍVEIS:</TitleColor>}
           <Colors>
             {data.cor1 !== "null" && <Color color={data.cor1} />}
             {data.cor2 !== "null" && <Color color={data.cor2} />}

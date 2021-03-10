@@ -18,7 +18,7 @@ export default function Sobre() {
     <Container>
       <Content>
         <Titulo>A Ubá Móveis</Titulo>
-        <SubTitulo>37 anos de tradição na região</SubTitulo>
+        <SubTitulo>38 anos de tradição na região</SubTitulo>
         <Paragraph>
           A loja onde se encontra de tudo para mobiliar uma casa, onde temos em
           um só lugar o setor de móveis em geral representado pela Ubá Móveis, o

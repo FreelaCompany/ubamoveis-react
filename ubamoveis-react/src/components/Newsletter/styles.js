@@ -45,7 +45,7 @@ export const Content = styled.div`
 export const DivInput = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 
   @media (max-width: 1099px) {
     justify-content: center;
@@ -56,11 +56,19 @@ export const DivInput = styled.div`
 
 export const LabelInput = styled.p`
   width: 378px;
-  height: 46px;
+  /* height: 46px;
   color: #fff;
   font-family: "SourceSansProRegular";
   font-size: 18px;
-  line-height: 23px;
+  line-height: 23px; */
+
+
+    color: #fff;
+    font-family: 'DosisSemiBold';
+    font-size: 21px;
+    line-height: 24px;
+    align-self: center;
+}
 
   @media (max-width: 1099px) {
     font-size: 16px;

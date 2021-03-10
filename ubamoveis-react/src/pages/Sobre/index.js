@@ -26,7 +26,7 @@ export default function Sobre() {
         text="Saiba mais sobre a Ubá Moveis"
       />
       <DivTitulo>
-        <TituloStrong>37 anos de tradição na região</TituloStrong>
+        <TituloStrong>38 anos de tradição na região</TituloStrong>
         <Separator />
       </DivTitulo>
       <DivSobre>

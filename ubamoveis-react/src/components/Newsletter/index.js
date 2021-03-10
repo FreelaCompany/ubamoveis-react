@@ -28,12 +28,15 @@ export default function Newsletter() {
   return (
     <Container>
       <Content>
-        <img src={newsletter} alt="" />
+        <LabelInput>
+          Cadastre o seu contato para saber mais. Ofertas e conteúdos exclusivos
+          da Ubá Móveis.
+        </LabelInput>
         <DivInput>
-          <LabelInput>
+          {/* <LabelInput>
             Cadastre para receber o desconto! Além de ofertas e conteúdos
             exclusivos da Ubá Móveis.
-          </LabelInput>
+          </LabelInput> */}
           <Input>
             <InputMask
               type="telefone"

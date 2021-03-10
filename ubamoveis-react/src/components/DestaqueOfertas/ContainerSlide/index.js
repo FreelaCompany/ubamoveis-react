@@ -56,12 +56,41 @@ export default function ContainerSlide({ data }) {
             <SeparatorLight />
             <DivBottom>
               <DivInfo>
-                <Info>Altura: {slide.altura}cm</Info>
-                <Info>Largura: {slide.largura}cm</Info>
-                <Info>Profundidade: {slide.profundidade}cm</Info>
+                {slide.altura !== "null" && (
+                  <Info>Altura: {slide.altura}cm</Info>
+                )}
+                {slide.largura !== "null" && (
+                  <Info>Largura: {slide.largura}cm</Info>
+                )}
+                {slide.profundidade !== "null" && (
+                  <Info>Profundidade: {slide.profundidade}cm</Info>
+                )}
               </DivInfo>
               <DivColors>
-                <TitleColor>CORES DISPONÍVEIS:</TitleColor>
+                {slide.cor1 !== "null" &&
+                  slide.cor2 === "null" &&
+                  slide.cor3 === "null" &&
+                  slide.cor4 === "null" && (
+                    <TitleColor>CORES DISPONÍVEIS:</TitleColor>
+                  )}
+                {slide.cor1 !== "null" &&
+                  slide.cor2 !== "null" &&
+                  slide.cor3 === "null" &&
+                  slide.cor4 === "null" && (
+                    <TitleColor>CORES DISPONÍVEIS:</TitleColor>
+                  )}
+                {slide.cor1 !== "null" &&
+                  slide.cor2 !== "null" &&
+                  slide.cor3 !== "null" &&
+                  slide.cor4 === "null" && (
+                    <TitleColor>CORES DISPONÍVEIS:</TitleColor>
+                  )}
+                {slide.cor1 !== "null" &&
+                  slide.cor2 !== "null" &&
+                  slide.cor3 !== "null" &&
+                  slide.cor4 !== "null" && (
+                    <TitleColor>CORES DISPONÍVEIS:</TitleColor>
+                  )}
                 <Colors>
                   {slide.cor1 !== "null" && <Color color={slide.cor1} />}
                   {slide.cor2 !== "null" && <Color color={slide.cor2} />}
