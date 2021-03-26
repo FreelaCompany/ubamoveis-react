@@ -1,7 +1,7 @@
 import { createBrowserHistory } from "history";
 
 const history = createBrowserHistory({
-  basename: "/2020",
+  basename: "/",
 });
 
 export default history;

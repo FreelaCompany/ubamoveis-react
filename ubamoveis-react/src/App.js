@@ -24,7 +24,7 @@ function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/2020">
+        <BrowserRouter basename="/">
           <GlobalStyle />
           <ScrollFixer />
           <Routes history={history} />
