@@ -1,7 +1,7 @@
 {
   "name": "ubamoveis-react",
   "homepage": "http://www.ubamoveis.com.br/",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^1.13.0",
