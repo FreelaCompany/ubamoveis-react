@@ -136,9 +136,7 @@ export const QrCodeZap = styled.img`
 
 
 export const Iframe = styled.iframe`
-  height: 500px;
-  width: 800px;
+  height: ${props=> props.height}; 
+  width: ${props=> props.width};
   border: none;
-
-  // jogar as props aqui 3 props uma pra cada medida de tela
-`;
+`; 
