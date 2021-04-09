@@ -133,3 +133,10 @@ export const QrCodeZap = styled.img`
   margin: 10px 0 10px 0;
   border-radius: 7px;
 `;
+
+
+export const Iframe = styled.iframe`
+  height: ${props=> props.height}; 
+  width: ${props=> props.width};
+  border: none;
+`; 
