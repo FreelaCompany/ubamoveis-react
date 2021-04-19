@@ -27,7 +27,7 @@ export const TituloStrong = styled.span`
 export const Separator = styled.div`
   width: 88px;
   height: 6px;
-  background-color: #f4b828;
+  background-color: ${colors.pumpkin};
   margin: 16px 0 24px 0;
 `;
 
@@ -42,20 +42,20 @@ export const DivForm = styled.div`
   .selectSexo {
     border-radius: 4px;
     background-color: transparent;
-    color: #c4c4c4;
+    color: ${colors.grayLight2};
     width: 100%;
     height: 60px;
   }
 
   .selectSexo__control {
     background-color: ${colors.white};
-    border: 1px solid #6b6d76;
+    border: 1px solid ${colors.grayLight7};
     box-shadow: none;
     width: 100%;
     height: 100%;
 
     &:hover {
-      border: 1px solid #6b6d76;
+      border: 1px solid ${colors.grayLight7};
     }
   }
 
@@ -95,7 +95,7 @@ export const DivForm = styled.div`
     textarea {
       padding: 16px;
       border-radius: 4px;
-      border: 1px #6b6d76 solid;
+      border: 1px ${colors.grayLight7} solid;
       background-color: transparent;
       color: ${colors.black};
       width: 100%;
@@ -109,12 +109,12 @@ export const DivForm = styled.div`
         margin-right: 0;
       }
       &::placeholder {
-        color: #081728;
+        color: ${colors.darkBlack};
       }
     }
 
     span {
-      color: #d13838;
+      color: ${colors.redLight};
     }
   }
 `;
@@ -225,13 +225,13 @@ export const ContainerInputFile = styled.div`
     width: 100%;
     height: 48px;
     border-radius: 2px;
-    border: 1px #d0d0d0 solid;
+    border: 1px ${colors.stainlessSteelGrayLight} solid;
     padding: 16px;
     font-family: "SourceSansProRegular";
     font-size: 18px;
     line-height: 23px;
-    color: #586365;
-    background-color: #fafafa;
+    color: ${colors.tealGray};
+    background-color: ${colors.westonLight};
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.075);
 
     &[type="number"] {
@@ -244,7 +244,7 @@ export const ContainerInputFile = styled.div`
     }
 
     &[disabled] {
-      background-color: #ededed;
+      background-color: ${colors.disableLight};
 
       &::placeholder {
         content: "";
@@ -265,12 +265,12 @@ export const Arquivo = styled.div`
     height: 60px;
     padding: 18px;
     border-radius: 4px;
-    border: 1px #6b6d76 solid;
+    border: 1px ${colors.grayLight7} solid;
     font-family: "SourceSansProRegular";
     font-size: 18px;
     line-height: 23px;
-    color: #586365 !important;
-    background-color: #fafafa;
+    color: ${colors.tealGray} !important;
+    background-color: ${colors.westonLight};
   }
 
   input.arquivo {
@@ -323,7 +323,7 @@ export const SendButton = styled.button.attrs({
   margin: 24px auto;
   border-radius: 3px;
   align-self: flex-start;
-  background-color: #f4b828;
+  background-color: ${colors.pumpkin};
   font-family: "DosisBold";
   font-size: 20px;
   line-height: 26px;
