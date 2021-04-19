@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const DivTitulo = styled.div`
   width: 100%;
@@ -15,7 +16,7 @@ export const DivTitulo = styled.div`
 `;
 
 export const Titulo = styled.h1`
-  color: #000;
+  color: ${colors.black};
   font-family: "DosisLight";
   font-size: 36px;
   line-height: 46px;
@@ -25,7 +26,7 @@ export const Titulo = styled.h1`
 `;
 
 export const TituloStrong = styled.span`
-  color: #000;
+  color: ${colors.black};
   font-family: "DosisBold";
   font-size: 36px;
   line-height: 46px;
@@ -38,7 +39,7 @@ export const TituloStrong = styled.span`
 export const Separator = styled.div`
   width: 88px;
   height: 6px;
-  background-color: #f4b828;
+  background-color: ${colors.pumpkin};
   margin: 16px 0 24px 0;
 `;
 
@@ -56,7 +57,7 @@ export const Paragraph = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
-  color: #000;
+  color: ${colors.black};
   margin-bottom: 24px;
   width: 90%;
   max-width: 545px;
@@ -84,7 +85,7 @@ export const SeparatorLight = styled.div`
   height: 1px;
   width: 90%;
   max-width: 1090px;
-  background-color: #d9d9d9;
+  background-color: ${colors.stainlessSteelGray};
   margin: 56px auto 31px auto;
 `;
 
@@ -98,8 +99,8 @@ export const DivVantagens = styled.div`
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 40px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid ${colors.stainlessSteelGray};
+  border-bottom: 1px solid ${colors.stainlessSteelGray};
 `;
 
 export const TituloVantagens = styled.h1`
@@ -107,7 +108,7 @@ export const TituloVantagens = styled.h1`
   font-size: 24px;
   line-height: 31px;
   text-transform: uppercase;
-  color: #000;
+  color: ${colors.black};
   margin-bottom: 12px;
 `;
 
@@ -127,7 +128,7 @@ export const Vantagem = styled.p`
   font-family: "DosisSemiBold";
   font-size: 18px;
   line-height: 26px;
-  color: #747474;
+  color: ${colors.mediumGray1};
   text-align: center;
 `;
 
@@ -163,7 +164,7 @@ export const Control = styled.h1`
   font-family: "DosisMedium";
   font-size: 18px;
   line-height: 22px;
-  color: #000;
+  color: ${colors.black};
   margin: 0 17px;
   border-bottom: ${(props) => (props.active ? "3px solid #000" : "none")};
   text-transform: uppercase;
@@ -182,7 +183,7 @@ export const TagError = styled.p`
   font-family: "DosisSemiBold";
   font-size: 18px;
   line-height: 26px;
-  color: #747474;
+  color: ${colors.mediumGray1};
   text-align: center;
   margin: 20px;
 `;

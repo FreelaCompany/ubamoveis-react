@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const Container = styled.div`
   height: 86px;
@@ -29,7 +30,7 @@ export const Content = styled.div`
 `;
 
 export const Direitos = styled.p`
-  color: #000;
+  color: ${colors.black};
   font-family: "SourceSansProSemiBold";
   font-size: 16px;
   line-height: 24px;
@@ -40,7 +41,7 @@ export const Direitos = styled.p`
 `;
 
 export const Dev = styled.p`
-  color: #000;
+  color: ${colors.black};
   font-family: "SourceSansProRegular";
   font-size: 14px;
   line-height: 18px;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const Container = styled.div`
-  background-color: #000;
+  background-color: ${colors.black};
   padding: 70px 0 80px 0;
   display: flex;
   flex-direction: column;
@@ -10,14 +11,14 @@ export const Container = styled.div`
 `;
 
 export const Titulo = styled.h1`
-  color: #fff;
+  color: ${colors.white};
   font-family: "DosisLight";
   font-size: 36px;
   line-height: 46px;
 `;
 
 export const TituloStrong = styled.span`
-  color: #fff;
+  color: ${colors.white};
   font-family: "DosisSemiBold";
   font-size: 36px;
   line-height: 46px;
@@ -26,7 +27,7 @@ export const TituloStrong = styled.span`
 export const Separator = styled.div`
   width: 88px;
   height: 6px;
-  background-color: #f4b828;
+  background-color: ${colors.pumpkin};
   margin: 12px 0 58px 0;
 `;
 
@@ -57,21 +58,21 @@ export const Loja = styled.div`
 `;
 
 export const NomeLoja = styled.h1`
-  color: #c1c1c1;
+  color: ${colors.grayLight5};
   font-family: "DosisSemiBold";
   font-size: 24px;
   line-height: 31px;
 `;
 
 export const EnderecoLoja = styled.p`
-  color: #b8b8b8;
+  color: ${colors.grayLight6};
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
 `;
 
 export const WhatsappLoja = styled.a`
-  color: #fff;
+  color: ${colors.white};
   font-family: "DosisBold";
   font-size: 18px;
   line-height: 22px;
@@ -104,7 +105,7 @@ export const DivPagamento = styled.div`
 `;
 
 export const TituloPagamento = styled.p`
-  color: #fff;
+  color: ${colors.white};
   font-family: "DosisBold";
   font-size: 18px;
   line-height: 22px;

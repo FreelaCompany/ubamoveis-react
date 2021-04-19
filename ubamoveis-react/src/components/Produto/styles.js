@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const ContainerProduto = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ export const ContainerProduto = styled.div`
   width: 100%;
   max-width: 415px;
   height: 648px;
-  background-color: #f3f3f3;
+  background-color: ${colors.weston};
   margin: 0 16px 48px 16px;
   padding: 26px 32px 42px 32px;
 
@@ -44,13 +45,13 @@ export const ContainerProduto = styled.div`
 export const Separator = styled.div`
   height: 1px;
   width: 100%;
-  background-color: #8a8a8a;
+  background-color: ${colors.darkGray};
 `;
 
 export const SeparatorLight = styled.div`
   height: 1px;
   width: 100%;
-  background-color: #d9d9d9;
+  background-color: ${colors.stainlessSteelGray};
   @media (max-width: 320px) {
     width: 90%;
   }
@@ -69,7 +70,7 @@ export const Title = styled.h1`
   font-family: "DosisSemiBold";
   font-size: 22px;
   line-height: 28px;
-  color: #000;
+  color: ${colors.black};
   text-transform: uppercase;
 
   @media (max-width: 320px) {
@@ -82,7 +83,7 @@ export const Price = styled.h1`
   font-family: "SourceSansProSemiBold";
   font-size: 20px;
   line-height: 25px;
-  color: #d24242;
+  color: ${colors.redCrimson};
   text-transform: uppercase;
   @media (max-width: 320px) {
     font-size: 17px;
@@ -94,7 +95,7 @@ export const Valid = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
-  color: #737373;
+  color: ${colors.mediumGray};
   text-transform: uppercase;
   margin-top: 11px;
 
@@ -129,7 +130,7 @@ export const Info = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
-  color: #737373;
+  color: ${colors.mediumGray};
 
   @media (max-width: 380px) {
     font-size: 13px;
@@ -158,7 +159,7 @@ export const TitleColor = styled.h1`
   font-family: "SourceSansProBold";
   font-size: 15px;
   line-height: 19px;
-  color: #000;
+  color: ${colors.black};
   text-transform: uppercase;
 
   @media (max-width: 380px) {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const Container = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ export const Title = styled.h1`
   font-family: "DosisBold";
   font-size: 66px;
   line-height: 84px;
-  color: #f4b828;
+  color: ${colors.pumpkin};
   text-transform: uppercase;
   text-align: center;
 
@@ -39,7 +40,7 @@ export const Text = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 18px;
   line-height: 23px;
-  color: #e4e4e4;
+  color: ${colors.grayLight4};
   width: 320px;
   text-align: center;
   margin-top: 10px;

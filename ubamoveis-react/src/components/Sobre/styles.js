@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const Container = styled.div`
   width: 100%;
-  background-color: #f3f3f3;
+  background-color: ${colors.weston};
   padding: 80px 140px;
 
   @media (max-width: 1200px) {
@@ -37,14 +38,14 @@ export const Titulo = styled.h1`
   font-family: "DosisBold";
   font-size: 36px;
   line-height: 46px;
-  color: #000;
+  color: ${colors.black};
 `;
 
 export const SubTitulo = styled.p`
   font-family: "DosisSemiBold";
   font-size: 24px;
   line-height: 31px;
-  color: #d9a423;
+  color: ${colors.pumpkinLight1};
 
   @media (max-width: 1200px) {
     width: 100%;
@@ -56,7 +57,7 @@ export const Paragraph = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
-  color: #000;
+  color: ${colors.black};
   margin-top: 24px;
   width: 340px;
 
@@ -85,7 +86,7 @@ export const TituloFrete = styled.h1`
   font-family: "DosisBold";
   font-size: 36px;
   line-height: 40px;
-  color: #000;
+  color: ${colors.black};
   width: 386px;
   height: 86px;
 
@@ -103,7 +104,7 @@ export const DivList = styled.div`
 `;
 
 export const ItemList = styled.p`
-  color: #b48b28;
+  color: ${colors.pumpkinLight2};
   font-family: "SourceSansProRegular";
   font-size: 18px;
   line-height: 23px;

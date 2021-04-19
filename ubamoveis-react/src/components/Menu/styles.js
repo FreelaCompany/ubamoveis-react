@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { colors } from "../../styles/colors";
 
 export const Container = styled.div`
   width: 100%;
   height: 125px;
-  background-color: #000;
+  background-color: ${colors.black};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +34,7 @@ export const ContentDesktop = styled.div`
 export const MenuMobile = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #000;
+  background-color: ${colors.black};
   padding: 10% 0;
   display: flex;
   flex-direction: column;
@@ -103,7 +104,7 @@ export const DivLeft = styled.div`
 
 export const LinkLeft = styled(Link)`
   margin: 0 0 0 25px;
-  color: #fff;
+  color: ${colors.white};
   text-transform: uppercase;
   font-family: "DosisMedium";
   font-size: 18px;
@@ -143,7 +144,7 @@ export const MenuRight = styled.div`
 
 export const LinkRight = styled(Link)`
   margin: 0 0 0 25px;
-  color: #fff;
+  color: ${colors.white};
   font-family: "SourceSansProSemiBold";
   font-size: 16px;
   line-height: 20px;
@@ -170,7 +171,7 @@ export const ContatoRight = styled.div`
   }
 
   .selectCidade__control {
-    background-color: #000;
+    background-color: ${colors.black};
     border: none;
     box-shadow: none;
     height: unset;
@@ -187,7 +188,7 @@ export const ContatoRight = styled.div`
   }
 
   .selectCidade__placeholder {
-    color: #fff;
+    color: ${colors.white};
   }
 
   .selectCidade__menu {
@@ -197,14 +198,14 @@ export const ContatoRight = styled.div`
 
 export const ContatoText = styled.p`
   margin: 0 12px;
-  color: #fff;
+  color: ${colors.white};
   font-family: "DosisMedium";
   font-size: 18px;
   line-height: 24px;
 `;
 
 export const NumeroSelecionado = styled.a`
-  color: #f9c445;
+  color: ${colors.pumpkinLight};
   font-family: "DosisMedium";
   font-size: 18px;
   line-height: 24px;

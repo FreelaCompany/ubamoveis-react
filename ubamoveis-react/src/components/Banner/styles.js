@@ -55,14 +55,14 @@ export const Titulo = styled.h1`
   font-family: "DosisSemiBold";
   font-size: 24px;
   line-height: 31px;
-  color: #fff;
+  color: ${colors.white};
 `;
 
 export const Descricao = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
-  color: #fff;
+  color: ${colors.white};
 `;
 
 export const DivPreco = styled.div`
@@ -80,21 +80,21 @@ export const Preco = styled.h1`
   font-family: "DosisBold";
   font-size: 51px;
   line-height: 64px;
-  color: #fff;
+  color: ${colors.white};
 `;
 
 export const PrecoSmall = styled.span`
   font-family: "DosisBold";
   font-size: 24px;
   line-height: 31px;
-  color: #fff;
+  color: ${colors.white};
 `;
 
 export const Pagamento = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 19px;
   line-height: 24px;
-  color: #fff;
+  color: ${colors.white};
 `;
 
 export const OfertaNumero = styled.a`

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const Container = styled.div`
   width: 100%;
@@ -15,7 +16,7 @@ export const Container = styled.div`
 `;
 
 export const Titulo = styled.h1`
-  color: #000;
+  color: ${colors.black};
   font-family: "DosisLight";
   font-size: 36px;
   line-height: 46px;
@@ -26,7 +27,7 @@ export const Titulo = styled.h1`
 `;
 
 export const TituloStrong = styled.span`
-  color: #000;
+  color: ${colors.black};
   font-family: "DosisBold";
   font-size: 36px;
   line-height: 46px;
@@ -38,7 +39,7 @@ export const TituloStrong = styled.span`
 export const Separator = styled.div`
   width: 88px;
   height: 6px;
-  background-color: #f4b828;
+  background-color: ${colors.pumpkin};
   margin: 16px 0 24px 0;
 `;
 
@@ -47,7 +48,7 @@ export const Obs = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
-  color: #737373;
+  color: ${colors.mediumGray};
   width: 90%;
   text-align: center;
 `;

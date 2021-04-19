@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const DivTitulo = styled.div`
   width: 100%;
@@ -10,14 +11,14 @@ export const DivTitulo = styled.div`
 `;
 
 export const Titulo = styled.h1`
-  color: #000;
+  color: ${colors.black};
   font-family: "DosisLight";
   font-size: 36px;
   line-height: 46px;
 `;
 
 export const TituloStrong = styled.span`
-  color: #000;
+  color: ${colors.black};
   font-family: "DosisBold";
   font-size: 36px;
   line-height: 46px;
@@ -47,7 +48,7 @@ export const DivForm = styled.div`
   }
 
   .selectSexo__control {
-    background-color: #fff;
+    background-color: ${colors.white};
     border: 1px solid #6b6d76;
     box-shadow: none;
     width: 100%;
@@ -83,7 +84,7 @@ export const DivForm = styled.div`
     width: 100%;
     z-index: 1;
     box-sizing: border-box;
-    color: #000;
+    color: ${colors.black};
   }
 
   form {
@@ -96,7 +97,7 @@ export const DivForm = styled.div`
       border-radius: 4px;
       border: 1px #6b6d76 solid;
       background-color: transparent;
-      color: #000;
+      color: ${colors.black};
       width: 100%;
       height: 60px;
       margin-right: 16px;
@@ -122,7 +123,7 @@ export const SubTitulo = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 18px;
   line-height: 23px;
-  color: #000;
+  color: ${colors.black};
 
   margin-bottom: 33px;
   width: 90%;
@@ -140,7 +141,7 @@ export const Column = styled.div`
   margin-bottom: 8px;
 
   label {
-    color: #000;
+    color: ${colors.black};
     font-family: "SourceSansProRegular";
     font-size: 18px;
     line-height: 23px;
@@ -162,7 +163,7 @@ export const Line = styled.div`
     flex-direction: column;
     align-items: flex-start;
     label {
-      color: #000;
+      color: ${colors.black};
       font-family: "SourceSansProRegular";
       font-size: 18px;
       line-height: 23px;
@@ -173,7 +174,7 @@ export const Line = styled.div`
     flex-direction: column;
     align-items: flex-start;
     label {
-      color: #000;
+      color: ${colors.black};
       font-family: "SourceSansProRegular";
       font-size: 18px;
       line-height: 23px;
@@ -189,7 +190,7 @@ export const Spinner = styled.span`
   font-size: 20px;
   width: 20px;
   height: 20px;
-  color: #fff !important;
+  color: ${colors.white} !important;
 
   @keyframes spin {
     from {
@@ -216,7 +217,7 @@ export const ContainerInputFile = styled.div`
     font-family: "SourceSansProRegular";
     font-size: 18px;
     line-height: 23px;
-    color: #000;
+    color: ${colors.black};
     margin-bottom: 8px;
   }
 
@@ -273,7 +274,7 @@ export const Arquivo = styled.div`
   }
 
   input.arquivo {
-    background-color: #000;
+    background-color: ${colors.black};
     position: absolute;
     z-index: 9999;
     opacity: 0;
@@ -287,9 +288,9 @@ export const Arquivo = styled.div`
 
   button {
     width: 193px;
-    background-color: #000;
+    background-color: ${colors.black};
     height: 60px;
-    color: #fff;
+    color: ${colors.white};
     font-family: "SourceSansProSemiBold";
     font-size: 18px;
     line-height: 23px;
@@ -327,7 +328,7 @@ export const SendButton = styled.button.attrs({
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
-  color: #000;
+  color: ${colors.black};
   text-align: center;
   transition: 300ms ease;
 

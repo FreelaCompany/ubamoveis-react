@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const Container = styled.div`
   width: 100%;
   height: 277px;
-  background-color: #ce3f3f;
+  background-color: ${colors.red};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +64,7 @@ export const LabelInput = styled.p`
   line-height: 23px; */
 
 
-    color: #fff;
+    color: ${colors.white};
     font-family: 'DosisSemiBold';
     font-size: 21px;
     line-height: 24px;
@@ -109,13 +110,13 @@ export const Input = styled.div`
     height: 52px;
     padding: 15px;
     font-size: 16px;
-    color: #000;
+    color: ${colors.black};
     font-weight: 400;
     font-family: "SourceSansProRegular";
   }
 
   ::-webkit-input-placeholder {
-    color: #fff;
+    color: ${colors.white};
   }
 
   ::-moz-placeholder {
@@ -133,8 +134,8 @@ export const Input = styled.div`
   button {
     width: 155px;
     height: 52px;
-    background-color: #000;
-    color: #fff;
+    background-color: ${colors.black};
+    color: ${colors.white};
     text-transform: uppercase;
     margin-left: 15px;
     font-family: "DosisBold";

@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const TituloUnidades = styled.h1`
-  color: #000;
+  color: ${colors.black};
   font-family: "DosisBold";
   font-size: 36px;
   line-height: 46px;
@@ -13,7 +14,7 @@ export const TituloUnidades = styled.h1`
 `;
 
 export const Descricao = styled.span`
-  color: #000;
+  color: ${colors.black};
   font-family: "SourceSansProRegular";
   font-size: 18px;
   line-height: 23px;
@@ -23,7 +24,7 @@ export const Descricao = styled.span`
 export const Separator = styled.div`
   width: 88px;
   height: 6px;
-  background-color: #f4b828;
+  background-color: ${colors.pumpkin};
   margin: 16px 0 24px 0;
 `;
 
@@ -64,8 +65,8 @@ export const Unidades = styled.div`
   }
 
   .selectCidade__control {
-    background-color: #fff;
-    border: 1px solid #b8b8b8;
+    background-color: ${colors.white};
+    border: 1px solid ${colors.grayLight6};
     box-shadow: none;
     border-radius: 0;
   }
@@ -77,7 +78,7 @@ export const Unidades = styled.div`
   }
 
   .selectCidade__placeholder {
-    color: #000;
+    color: ${colors.black};
   }
 
   .selectCidade__menu {
@@ -103,7 +104,7 @@ export const CidadeTelefone = styled.div`
 
 export const Telefone = styled.p`
   margin: 0 12px;
-  color: #000;
+  color: ${colors.black};
   font-family: "DosisMedium";
   font-size: 18px;
   line-height: 24px;
@@ -112,7 +113,7 @@ export const Telefone = styled.p`
 export const EnderecoLoja = styled.p`
   width: 246px;
   height: 60px;
-  color: #000;
+  color: ${colors.black};
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
@@ -120,7 +121,7 @@ export const EnderecoLoja = styled.p`
 `;
 
 export const NomeLoja = styled.h1`
-  color: #000;
+  color: ${colors.black};
   font-family: "DosisSemiBold";
   font-size: 26px;
   line-height: 33px;
