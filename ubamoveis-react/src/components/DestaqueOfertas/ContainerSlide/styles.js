@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../../styles/colors";
 
 export let Container = styled.section`
   width: 100%;
@@ -64,7 +65,7 @@ export const Control = styled.h1`
   font-family: "DosisMedium";
   font-size: 18px;
   line-height: 22px;
-  color: #000;
+  color: ${colors.black};
   border-bottom: ${(props) => (props.active ? "3px solid #000" : "none")};
   width: "30%";
   text-transform: uppercase;
@@ -78,7 +79,7 @@ export const DivProduto = styled.div`
   width: 100%;
   max-width: 385px;
   height: 648px;
-  background-color: #f3f3f3;
+  background-color: ${colors.weston};
   margin: 0 16px 0 16px;
   padding: 26px 32px 42px 32px;
 
@@ -102,7 +103,7 @@ export const DivProduto = styled.div`
     width: 90%;
     max-width: 225px;
     height: 440px;
-    background-color: #f3f3f3;
+    background-color: ${colors.weston};
     margin: 0 16px 0 16px;
     padding: 26px 32px 42px 32px;
 
@@ -126,7 +127,7 @@ export const DivProduto = styled.div`
     width: 90%;
     max-width: 300px;
     height: 500px;
-    background-color: #f3f3f3;
+    background-color: ${colors.weston};
     margin: 0 16px 0 16px;
     padding: 26px 32px 42px 32px;
 
@@ -153,13 +154,13 @@ export const DivProduto = styled.div`
 export const Separator = styled.div`
   height: 1px;
   width: 100%;
-  background-color: #8a8a8a;
+  background-color: ${colors.darkGray};
 `;
 
 export const SeparatorLight = styled.div`
   height: 1px;
   width: 100%;
-  background-color: #d9d9d9;
+  background-color: ${colors.stainlessSteelGray};
 `;
 
 export const DivPrice = styled.div`
@@ -194,7 +195,7 @@ export const Title = styled.h1`
   font-family: "DosisSemiBold";
   font-size: 22px;
   line-height: 28px;
-  color: #000;
+  color: ${colors.black};
   text-transform: uppercase;
 
   @media (max-width: 320px) {
@@ -213,7 +214,7 @@ export const Price = styled.h1`
   font-family: "SourceSansProSemiBold";
   font-size: 20px;
   line-height: 25px;
-  color: #d24242;
+  color: ${colors.redCrimson};
   text-transform: uppercase;
   text-align: left;
 `;
@@ -222,7 +223,7 @@ export const Valid = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
-  color: #737373;
+  color: ${colors.mediumGray};
   text-transform: uppercase;
   margin-top: 11px;
 
@@ -288,7 +289,7 @@ export const Info = styled.p`
   font-family: "SourceSansProRegular";
   font-size: 16px;
   line-height: 20px;
-  color: #737373;
+  color: ${colors.mediumGray};
 
   @media (max-width: 576px) {
     font-size: 14px;
@@ -313,7 +314,7 @@ export const TitleColor = styled.h1`
   font-family: "SourceSansProBold";
   font-size: 15px;
   line-height: 19px;
-  color: #000;
+  color: ${colors.black};
   text-transform: uppercase;
 
   @media (max-width: 576px) {
